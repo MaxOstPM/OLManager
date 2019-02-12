@@ -1,0 +1,6 @@
+use_frameworks!
+target 'OLManager_Tests' do
+  pod 'OLManager', :path => '../'
+  
+  
+end
