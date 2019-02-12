@@ -1,0 +1,16 @@
+PODS:
+  - OLManager (0.1.0)
+
+DEPENDENCIES:
+  - OLManager (from `../`)
+
+EXTERNAL SOURCES:
+  OLManager:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  OLManager: 096fb087ec7ddf3d410296e3feabcd3e13e1dde4
+
+PODFILE CHECKSUM: 2417754672d946adaf794b51a045d844d5f4d69a
+
+COCOAPODS: 1.5.3

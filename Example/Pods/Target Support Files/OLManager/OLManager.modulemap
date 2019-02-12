@@ -1,0 +1,6 @@
+framework module OLManager {
+  umbrella header "OLManager-umbrella.h"
+
+  export *
+  module * { export * }
+}
