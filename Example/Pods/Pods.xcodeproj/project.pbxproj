@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		104746F5598D33BD09C1D55B40BA305D /* Pods-OLManager_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 413B9B420F3E8D6150B566E81AE70CB9 /* Pods-OLManager_Tests-dummy.m */; };
 		354A2362860BCE5B0967CFCC78CA4592 /* OLManager-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5288AF2B57FC5991A272824C8193AA9A /* OLManager-dummy.m */; };
-		37579A6F0E62177CA60F288EA4B37FEE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		50DE450D22141BA500D0D5AA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50DE450C22141BA500D0D5AA /* UIKit.framework */; };
 		51CB434B6C9E1274BD0F2F7C3C66E47C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		C2FA68E2CC4154FEF8AD747693B201B3 /* Pods-OLManager_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 558E144EA3FAE57E76E891B440087906 /* Pods-OLManager_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CAC834A1583C9627F340532EA1D231D6 /* OLManager-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DCAA544DE5DD18B5CE0006EDF3F762AA /* OLManager-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -47,6 +47,7 @@
 		50C59AB822130AA60053F2E5 /* OverlayWindowRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayWindowRootViewController.swift; sourceTree = "<group>"; };
 		50C59ABA22130AA60053F2E5 /* OverlayWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayWindow.swift; sourceTree = "<group>"; };
 		50C59ABD22130AA60053F2E5 /* OverlayDisplayConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayDisplayConfiguration.swift; sourceTree = "<group>"; };
+		50DE450C22141BA500D0D5AA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		5288AF2B57FC5991A272824C8193AA9A /* OLManager-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "OLManager-dummy.m"; sourceTree = "<group>"; };
 		558E144EA3FAE57E76E891B440087906 /* Pods-OLManager_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-OLManager_Tests-umbrella.h"; sourceTree = "<group>"; };
 		5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -81,7 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37579A6F0E62177CA60F288EA4B37FEE /* Foundation.framework in Frameworks */,
+				50DE450D22141BA500D0D5AA /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +282,7 @@
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				50DE450C22141BA500D0D5AA /* UIKit.framework */,
 				5E0D919E635D23B70123790B8308F8EF /* iOS */,
 			);
 			name = Frameworks;
