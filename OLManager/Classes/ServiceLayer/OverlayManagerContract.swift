@@ -15,10 +15,10 @@ public enum Edge {
 }
 
 // MARK: OverlayManager
-protocol ViewControllerObservable {
+public protocol ViewControllerObservable {
     func viewControllerBecomeActive(_ viewController: UIViewController)
 }
 
-protocol OverlayRemovable: class {
+public protocol OverlayRemovable: class {
     func removeOverlay(_ overlay: UIView, animated: Bool)
 }

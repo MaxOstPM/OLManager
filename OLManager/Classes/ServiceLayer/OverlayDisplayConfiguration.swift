@@ -11,7 +11,6 @@ import Foundation
 public struct OverlayDisplayConfiguration {
     let pinningEdge: Edge
     let animationType: AnimationType
-    // TODO: Add additional overlay insets
 }
 
 extension OverlayDisplayConfiguration {

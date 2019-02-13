@@ -8,10 +8,10 @@
 
 import UIKit
 
-typealias BaseVCBox = WeakBox<UIViewController>
-typealias OverlayContainer = (overlay: UIView, animator: AnimationPerformer)
+private typealias BaseVCBox = WeakBox<UIViewController>
+private typealias OverlayContainer = (overlay: UIView, animator: AnimationPerformer)
 
-protocol OverlayManager {
+public protocol OverlayManager {
     
     associatedtype OverlayFactoryImp: OverlayFactory
     
@@ -27,7 +27,7 @@ protocol OverlayManager {
 public final class OverlayManagerOf<OverlayFactoryImp: OverlayFactory>: OverlayManager {
  
     private let animationPerformerFactory: AnimationPerformerFactory
-    var overlaysFactory: OverlayFactoryImp
+    private var overlaysFactory: OverlayFactoryImp
     
     private var map: [BaseVCBox: [OverlayContainer]]
     

@@ -8,7 +8,7 @@
 
 import Foundation
 
-typealias WeakItem = AnyObject & Hashable
+private typealias WeakItem = AnyObject & Hashable
 
 final class WeakBox<T: WeakItem>: Hashable {
     
