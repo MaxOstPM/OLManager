@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol OverlayFactory {
+public protocol OverlayFactory {
     associatedtype OverlayType
     
     func makeOverlayWith(type: OverlayType) -> UIView

@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum Edge {
+public enum Edge {
     case top
     case bottom
     // TODO: add left and right edges

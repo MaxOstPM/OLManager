@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIViewController {
+public extension UIViewController {
     
     var availableRegion: CGRect {
         return self.view.frame.shrinked(with: self.overlayInsets)

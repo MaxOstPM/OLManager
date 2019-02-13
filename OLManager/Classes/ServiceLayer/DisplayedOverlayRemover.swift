@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class DisplayedOverlayRemover {
+public final class DisplayedOverlayRemover {
     
     private weak var overlay: UIView?
     private weak var overlayRemovable: OverlayRemovable?

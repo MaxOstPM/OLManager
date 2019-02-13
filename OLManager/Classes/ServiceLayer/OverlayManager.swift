@@ -24,7 +24,7 @@ protocol OverlayManager {
     init(factory: OverlayFactoryImp)
 }
 
-final class OverlayManagerOf<OverlayFactoryImp: OverlayFactory>: OverlayManager {
+public final class OverlayManagerOf<OverlayFactoryImp: OverlayFactory>: OverlayManager {
  
     private let animationPerformerFactory: AnimationPerformerFactory
     var overlaysFactory: OverlayFactoryImp
