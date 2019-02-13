@@ -9,12 +9,12 @@
 import UIKit
 
 protocol AnimationPerformerFactory {
-    func makeAnimationPerformerFor(_ overlay: Overlay, with type: AnimationType, windowRootViewController: OverlayWindowRootViewController, overlayedViewController: UIViewController, displayConfig: OverlayDisplayConfiguration) -> AnimationPerformer
+    func makeAnimationPerformerFor(_ overlay: UIView, with type: AnimationType, windowRootViewController: OverlayWindowRootViewController, overlayedViewController: UIViewController, displayConfig: OverlayDisplayConfiguration) -> AnimationPerformer
 }
 
 final class AnimationPerformerFactoryImp: AnimationPerformerFactory {
     
-    func makeAnimationPerformerFor(_ overlay: Overlay, with type: AnimationType, windowRootViewController: OverlayWindowRootViewController, overlayedViewController: UIViewController, displayConfig: OverlayDisplayConfiguration) -> AnimationPerformer {
+    func makeAnimationPerformerFor(_ overlay: UIView, with type: AnimationType, windowRootViewController: OverlayWindowRootViewController, overlayedViewController: UIViewController, displayConfig: OverlayDisplayConfiguration) -> AnimationPerformer {
         let PerformerType: BaseAnimationPerformer.Type
         
         switch type {

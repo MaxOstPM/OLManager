@@ -46,7 +46,6 @@
 		50C59AB522130AA60053F2E5 /* UIViewController+OverlayInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+OverlayInsets.swift"; sourceTree = "<group>"; };
 		50C59AB822130AA60053F2E5 /* OverlayWindowRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayWindowRootViewController.swift; sourceTree = "<group>"; };
 		50C59ABA22130AA60053F2E5 /* OverlayWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayWindow.swift; sourceTree = "<group>"; };
-		50C59ABC22130AA60053F2E5 /* Overlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Overlay.swift; sourceTree = "<group>"; };
 		50C59ABD22130AA60053F2E5 /* OverlayDisplayConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayDisplayConfiguration.swift; sourceTree = "<group>"; };
 		5288AF2B57FC5991A272824C8193AA9A /* OLManager-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "OLManager-dummy.m"; sourceTree = "<group>"; };
 		558E144EA3FAE57E76E891B440087906 /* Pods-OLManager_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-OLManager_Tests-umbrella.h"; sourceTree = "<group>"; };
@@ -207,7 +206,6 @@
 		50C59ABB22130AA60053F2E5 /* Overlay */ = {
 			isa = PBXGroup;
 			children = (
-				50C59ABC22130AA60053F2E5 /* Overlay.swift */,
 				50C59ABD22130AA60053F2E5 /* OverlayDisplayConfiguration.swift */,
 			);
 			path = Overlay;

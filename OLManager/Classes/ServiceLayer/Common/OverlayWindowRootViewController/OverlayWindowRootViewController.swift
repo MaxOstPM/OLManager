@@ -10,7 +10,7 @@ import UIKit
 
 class OverlayWindowRootViewController: UIViewController {
     
-    private (set) var overlays: [Overlay] = []
+    private (set) var overlays: [UIView] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,12 +21,12 @@ class OverlayWindowRootViewController: UIViewController {
 
 extension OverlayWindowRootViewController {
     
-    func addNewOverlay(_ overlay: Overlay) {
+    func addNewOverlay(_ overlay: UIView) {
         overlays.append(overlay)
         view.addSubview(overlay)
     }
     
-    func removeOverlay(_ overlay: Overlay) {
+    func removeOverlay(_ overlay: UIView) {
         overlay.removeFromSuperview()
         overlays = overlays.filter({ return $0 != overlay })
     }

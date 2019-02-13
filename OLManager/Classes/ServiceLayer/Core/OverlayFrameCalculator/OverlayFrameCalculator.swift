@@ -9,12 +9,12 @@
 import UIKit
 
 protocol OverlayFrameCalculator {
-    func makeFrameFor(overlay: Overlay, inside availableRegion: CGRect, onEdge edge: Edge) -> CGRect
+    func makeFrameFor(overlay: UIView, inside availableRegion: CGRect, onEdge edge: Edge) -> CGRect
 }
 
 final class OverlayFrameCalculatorImp: OverlayFrameCalculator {
     
-    func makeFrameFor(overlay: Overlay, inside availableRegion: CGRect, onEdge edge: Edge) -> CGRect {
+    func makeFrameFor(overlay: UIView, inside availableRegion: CGRect, onEdge edge: Edge) -> CGRect {
         let overlaySize = overlay.frame.size
         
         if overlaySize.width <= availableRegion.size.width && overlaySize.height <= availableRegion.size.height {

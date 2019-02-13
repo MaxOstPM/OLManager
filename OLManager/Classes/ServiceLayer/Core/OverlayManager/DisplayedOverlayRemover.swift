@@ -6,14 +6,14 @@
 //  Copyright © 2019 Максим Остапчук. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 final class DisplayedOverlayRemover {
     
-    private weak var overlay: Overlay?
+    private weak var overlay: UIView?
     private weak var overlayRemovable: OverlayRemovable?
     
-    init(overlay: Overlay? = nil, overlayRemovable: OverlayRemovable? = nil) {
+    init(overlay: UIView? = nil, overlayRemovable: OverlayRemovable? = nil) {
         self.overlay = overlay
         self.overlayRemovable = overlayRemovable
     }

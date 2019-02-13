@@ -11,5 +11,5 @@ import UIKit
 protocol OverlayFactory {
     associatedtype OverlayType
     
-    func makeOverlayWith(type: OverlayType) -> Overlay
+    func makeOverlayWith(type: OverlayType) -> UIView
 }

@@ -11,7 +11,7 @@ import UIKit
 typealias OptionalCompletion = (() -> Void)?
 
 protocol AnimationPerformer {
-    init(windowRootViewController: OverlayWindowRootViewController, overlayedViewController: UIViewController, overlay: Overlay, displayConfig: OverlayDisplayConfiguration)
+    init(windowRootViewController: OverlayWindowRootViewController, overlayedViewController: UIViewController, overlay: UIView, displayConfig: OverlayDisplayConfiguration)
     
     func displayOverlayAfterAppearence()
     func displayOverlay()
@@ -23,7 +23,7 @@ class BaseAnimationPerformer: AnimationPerformer {
     private var overlayFrameCalculator: OverlayFrameCalculator
     private var windowRootViewController: OverlayWindowRootViewController
     
-    var overlay: Overlay
+    var overlay: UIView
     var displayConfig: OverlayDisplayConfiguration
     
     var availableRegion: CGRect
@@ -34,7 +34,7 @@ class BaseAnimationPerformer: AnimationPerformer {
         return 0.0
     }
     
-    required init(windowRootViewController: OverlayWindowRootViewController, overlayedViewController: UIViewController, overlay: Overlay, displayConfig: OverlayDisplayConfiguration) {
+    required init(windowRootViewController: OverlayWindowRootViewController, overlayedViewController: UIViewController, overlay: UIView, displayConfig: OverlayDisplayConfiguration) {
         self.windowRootViewController = windowRootViewController
         self.availableRegion = overlayedViewController.availableRegion
         self.overlayFrameCalculator = OverlayFrameCalculatorImp()
