@@ -30,7 +30,6 @@
 		2CAA47D1C16B48746A5EADBCDA95D55B /* OLManager.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = OLManager.podspec; sourceTree = "<group>"; };
 		2D51A2BE992B6E2C578712D2F6EA34AB /* OLManager.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = OLManager.modulemap; sourceTree = "<group>"; };
 		413B9B420F3E8D6150B566E81AE70CB9 /* Pods-OLManager_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-OLManager_Tests-dummy.m"; sourceTree = "<group>"; };
-		50C59AA222130AA60053F2E5 /* OverlayManagerContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayManagerContract.swift; sourceTree = "<group>"; };
 		50C59AA422130AA60053F2E5 /* OverlayFrameCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayFrameCalculator.swift; sourceTree = "<group>"; };
 		50C59AA622130AA60053F2E5 /* OverlayFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayFactory.swift; sourceTree = "<group>"; };
 		50C59AA822130AA60053F2E5 /* WeakBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakBox.swift; sourceTree = "<group>"; };
@@ -102,114 +101,25 @@
 		50C59AA022130AA60053F2E5 /* ServiceLayer */ = {
 			isa = PBXGroup;
 			children = (
-				50C59AA122130AA60053F2E5 /* Core */,
-				50C59AB222130AA60053F2E5 /* Extensions */,
-				50C59AB622130AA60053F2E5 /* Common */,
-			);
-			name = ServiceLayer;
-			path = OLManager/Classes/ServiceLayer;
-			sourceTree = "<group>";
-		};
-		50C59AA122130AA60053F2E5 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				50C59AA222130AA60053F2E5 /* OverlayManagerContract.swift */,
-				50C59AA322130AA60053F2E5 /* OverlayFrameCalculator */,
-				50C59AA522130AA60053F2E5 /* OverlayFactory */,
-				50C59AA722130AA60053F2E5 /* WeakBox */,
-				50C59AA922130AA60053F2E5 /* AnimationPerformer */,
-				50C59AAF22130AA60053F2E5 /* OverlayManager */,
-			);
-			path = Core;
-			sourceTree = "<group>";
-		};
-		50C59AA322130AA60053F2E5 /* OverlayFrameCalculator */ = {
-			isa = PBXGroup;
-			children = (
 				50C59AA422130AA60053F2E5 /* OverlayFrameCalculator.swift */,
-			);
-			path = OverlayFrameCalculator;
-			sourceTree = "<group>";
-		};
-		50C59AA522130AA60053F2E5 /* OverlayFactory */ = {
-			isa = PBXGroup;
-			children = (
 				50C59AA622130AA60053F2E5 /* OverlayFactory.swift */,
-			);
-			path = OverlayFactory;
-			sourceTree = "<group>";
-		};
-		50C59AA722130AA60053F2E5 /* WeakBox */ = {
-			isa = PBXGroup;
-			children = (
 				50C59AA822130AA60053F2E5 /* WeakBox.swift */,
-			);
-			path = WeakBox;
-			sourceTree = "<group>";
-		};
-		50C59AA922130AA60053F2E5 /* AnimationPerformer */ = {
-			isa = PBXGroup;
-			children = (
 				50C59AAA22130AA60053F2E5 /* AnimationPerformerFactory.swift */,
 				50C59AAB22130AA60053F2E5 /* SlideAnimationPerformer.swift */,
 				50C59AAC22130AA60053F2E5 /* FadeInAnimationPerformer.swift */,
 				50C59AAD22130AA60053F2E5 /* StaticAnimationPerformer.swift */,
 				50C59AAE22130AA60053F2E5 /* AnimationPerformerContract.swift */,
-			);
-			path = AnimationPerformer;
-			sourceTree = "<group>";
-		};
-		50C59AAF22130AA60053F2E5 /* OverlayManager */ = {
-			isa = PBXGroup;
-			children = (
 				50C59AB022130AA60053F2E5 /* OverlayManager.swift */,
 				50C59AB122130AA60053F2E5 /* DisplayedOverlayRemover.swift */,
-			);
-			path = OverlayManager;
-			sourceTree = "<group>";
-		};
-		50C59AB222130AA60053F2E5 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
 				50C59AB322130AA60053F2E5 /* CGRect+Shrinked.swift */,
 				50C59AB422130AA60053F2E5 /* BaseViewController+AvailableRegion.swift */,
 				50C59AB522130AA60053F2E5 /* UIViewController+OverlayInsets.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		50C59AB622130AA60053F2E5 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				50C59AB722130AA60053F2E5 /* OverlayWindowRootViewController */,
-				50C59AB922130AA60053F2E5 /* OverlayWindow */,
-				50C59ABB22130AA60053F2E5 /* Overlay */,
-			);
-			path = Common;
-			sourceTree = "<group>";
-		};
-		50C59AB722130AA60053F2E5 /* OverlayWindowRootViewController */ = {
-			isa = PBXGroup;
-			children = (
 				50C59AB822130AA60053F2E5 /* OverlayWindowRootViewController.swift */,
-			);
-			path = OverlayWindowRootViewController;
-			sourceTree = "<group>";
-		};
-		50C59AB922130AA60053F2E5 /* OverlayWindow */ = {
-			isa = PBXGroup;
-			children = (
 				50C59ABA22130AA60053F2E5 /* OverlayWindow.swift */,
-			);
-			path = OverlayWindow;
-			sourceTree = "<group>";
-		};
-		50C59ABB22130AA60053F2E5 /* Overlay */ = {
-			isa = PBXGroup;
-			children = (
 				50C59ABD22130AA60053F2E5 /* OverlayDisplayConfiguration.swift */,
 			);
-			path = Overlay;
+			name = ServiceLayer;
+			path = OLManager/Classes/ServiceLayer;
 			sourceTree = "<group>";
 		};
 		57A58C3C58F9C744052000C8BE9EC882 /* Targets Support Files */ = {
