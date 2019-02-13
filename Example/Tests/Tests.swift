@@ -1,28 +1,23 @@
-import XCTest
 import OLManager
 
-class Tests: XCTestCase {
+enum Overlays {
+    case provideStatistic
+    case paidSocialFailure
+}
+
+final class OverlayFactoryImp: OverlayFactory {
     
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func makeOverlayWith(type: Overlays) -> UIView {
+        return UIView()
     }
+}
+
+final class OverlayManagerProvider {
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
+    static let provider = OverlayManagerProvider()
+    
+    var overlayManager: OverlayManagerOf<OverlayFactoryImp> {
+        let factory = OverlayFactoryImp()
+        return OverlayManagerOf<OverlayFactoryImp>(factory: factory)
     }
-    
-    func testExample() {
-        // This is an example of a functional test case.
-        XCTAssert(true, "Pass")
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure() {
-            // Put the code you want to measure the time of here.
-        }
-    }
-    
 }

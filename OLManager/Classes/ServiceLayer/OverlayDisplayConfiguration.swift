@@ -13,14 +13,14 @@ public struct OverlayDisplayConfiguration {
     let animationType: AnimationType
 }
 
-extension OverlayDisplayConfiguration {
+public extension OverlayDisplayConfiguration {
     init(pinToEdge: Edge, animationType: AnimationType) {
         self.pinningEdge = pinToEdge
         self.animationType = animationType
     }
 }
 
-enum AnimationType {
+public enum AnimationType {
     case fadeIn
     case slide
     case none

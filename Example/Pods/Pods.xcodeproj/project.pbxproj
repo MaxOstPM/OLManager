@@ -7,249 +7,272 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		104746F5598D33BD09C1D55B40BA305D /* Pods-OLManager_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 413B9B420F3E8D6150B566E81AE70CB9 /* Pods-OLManager_Tests-dummy.m */; };
-		354A2362860BCE5B0967CFCC78CA4592 /* OLManager-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5288AF2B57FC5991A272824C8193AA9A /* OLManager-dummy.m */; };
-		50DE450D22141BA500D0D5AA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50DE450C22141BA500D0D5AA /* UIKit.framework */; };
-		50DE452222142CDD00D0D5AA /* OverlayManagerContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DE452122142CDD00D0D5AA /* OverlayManagerContract.swift */; };
-		51CB434B6C9E1274BD0F2F7C3C66E47C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
-		C2FA68E2CC4154FEF8AD747693B201B3 /* Pods-OLManager_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 558E144EA3FAE57E76E891B440087906 /* Pods-OLManager_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CAC834A1583C9627F340532EA1D231D6 /* OLManager-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DCAA544DE5DD18B5CE0006EDF3F762AA /* OLManager-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		005B63DC90BFD357921DE9D2A99B4EC7 /* OverlayFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EAB69D0BE2BF0957C7CF55D2D7F17D /* OverlayFactory.swift */; };
+		041662BE39859B0CADCC53423C73C04E /* FadeInAnimationPerformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D08287F634102F2E088141B2D5D64 /* FadeInAnimationPerformer.swift */; };
+		0747E187848A926C85F25A778B71BED1 /* OverlayWindowRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0848F821836027B851B82BDBB07F5F /* OverlayWindowRootViewController.swift */; };
+		0940D20212611174C8EA4F6F6C0778BA /* OverlayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83AA8A98DA2304393B71FD421D5B14C /* OverlayManager.swift */; };
+		0FAB8E879F054AAA0DF4936E5D8816C1 /* Pods-OLManager_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A8FDE6E9C5045D21B8676EF47B4A5C5 /* Pods-OLManager_Tests-dummy.m */; };
+		2CD2C8808AE89733E6FF6DC0CC0E838D /* OLManager-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4444E83FDE4D6F431BE624D0B30D0319 /* OLManager-dummy.m */; };
+		40AB1D2EBBBEFA0ADE20818C74BC9961 /* OLManager-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8037CA52A95F4A48838B81330F049EDD /* OLManager-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		530F597379752C01700C3C684BA7CC29 /* UIViewController+OverlayInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4B6D5E2F666259268ECD45DCF299F6 /* UIViewController+OverlayInsets.swift */; };
+		5FAEE479887840234470834388CB245B /* AnimationPerformerContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBDC4D5BEDADBE3B7CCF8951730C916 /* AnimationPerformerContract.swift */; };
+		6706B999D932F0A150F27B21601524A6 /* AnimationPerformerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E035DC282CA37F318DA36FE78B607E2A /* AnimationPerformerFactory.swift */; };
+		68E837B1FF5B39EA135D65577B60C1E5 /* OverlayManagerContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6664F0A865E05DDA4488F7FD22B87DC5 /* OverlayManagerContract.swift */; };
+		7356A2E8F7ADD71E158D063D7D6E6968 /* OverlayWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F143C78268848AD63D83103C942F6E3 /* OverlayWindow.swift */; };
+		8AFC0144AD150F45496CDEFD69C69548 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
+		8B8CD854C0271E8E9C1133DB2B27925A /* SlideAnimationPerformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E87F106C7F7365B337933E4CC0AEB5E /* SlideAnimationPerformer.swift */; };
+		97BDD6F0763407C42E481DC322B06AD8 /* WeakBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9953D5011B889689B4E9B2C3350DA9AF /* WeakBox.swift */; };
+		97E7822AD0BB10A321A0BF2178439623 /* BaseViewController+AvailableRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1237D49133E78F902B96917BB4C74BFA /* BaseViewController+AvailableRegion.swift */; };
+		A16DD64E5B01612A969FF61ABAB1FB58 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
+		AECA59AC0FBC9DFBBA551FFE4A33851B /* OverlayDisplayConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6BDA2E30FFCA87418C3B6FB5992CDE /* OverlayDisplayConfiguration.swift */; };
+		B84FB5F5CE865CF89C2666B181639A5F /* StaticAnimationPerformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F13ED947A70149241D0C41C1260949 /* StaticAnimationPerformer.swift */; };
+		C011D5911AB44FC8BDA514A50F115BA8 /* OverlayFrameCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED8D5B5A5F3E2EB58ECC54A164D242D /* OverlayFrameCalculator.swift */; };
+		C034E21CC61A37E682E5721A1F2F0DBA /* DisplayedOverlayRemover.swift in Sources */ = {isa = PBXBuildFile; fileRef = A202C632F0ECA31030E5D10172FF14C7 /* DisplayedOverlayRemover.swift */; };
+		DA542A2EDA52A1CA11E599F14CD25756 /* CGRect+Shrinked.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F5740216F522ED77939267FBB3F055 /* CGRect+Shrinked.swift */; };
+		F419EA880B9AD3EC2A1CDC1BB96C0824 /* Pods-OLManager_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BD1E20EDACB9889F60F6D5FE98808B5 /* Pods-OLManager_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		110AC0D4BEB1B7A17A0ACE31CA03F2EC /* PBXContainerItemProxy */ = {
+		4A5A1955682E9FDE4C03CEEAD98EE143 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 403FDCF50C152CDE33CC2A995D02C8D2;
+			remoteGlobalIDString = 6158448B9D72A92734754657D7822256;
 			remoteInfo = OLManager;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		14E9A8981A180D4A9B1C5EF273C1B7B4 /* Pods-OLManager_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OLManager_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		2CAA47D1C16B48746A5EADBCDA95D55B /* OLManager.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = OLManager.podspec; sourceTree = "<group>"; };
-		2D51A2BE992B6E2C578712D2F6EA34AB /* OLManager.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = OLManager.modulemap; sourceTree = "<group>"; };
-		413B9B420F3E8D6150B566E81AE70CB9 /* Pods-OLManager_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-OLManager_Tests-dummy.m"; sourceTree = "<group>"; };
-		50DE450C22141BA500D0D5AA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		50DE451122142C7400D0D5AA /* OverlayManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayManager.swift; sourceTree = "<group>"; };
-		50DE451222142C7400D0D5AA /* DisplayedOverlayRemover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayedOverlayRemover.swift; sourceTree = "<group>"; };
-		50DE451322142C7400D0D5AA /* OverlayFrameCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayFrameCalculator.swift; sourceTree = "<group>"; };
-		50DE451422142C7400D0D5AA /* CGRect+Shrinked.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+Shrinked.swift"; sourceTree = "<group>"; };
-		50DE451522142C7400D0D5AA /* AnimationPerformerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationPerformerFactory.swift; sourceTree = "<group>"; };
-		50DE451622142C7400D0D5AA /* WeakBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakBox.swift; sourceTree = "<group>"; };
-		50DE451722142C7400D0D5AA /* BaseViewController+AvailableRegion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BaseViewController+AvailableRegion.swift"; sourceTree = "<group>"; };
-		50DE451822142C7400D0D5AA /* UIViewController+OverlayInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+OverlayInsets.swift"; sourceTree = "<group>"; };
-		50DE451922142C7400D0D5AA /* SlideAnimationPerformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideAnimationPerformer.swift; sourceTree = "<group>"; };
-		50DE451A22142C7400D0D5AA /* FadeInAnimationPerformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadeInAnimationPerformer.swift; sourceTree = "<group>"; };
-		50DE451B22142C7400D0D5AA /* OverlayDisplayConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayDisplayConfiguration.swift; sourceTree = "<group>"; };
-		50DE451C22142C7400D0D5AA /* OverlayWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayWindow.swift; sourceTree = "<group>"; };
-		50DE451D22142C7400D0D5AA /* StaticAnimationPerformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticAnimationPerformer.swift; sourceTree = "<group>"; };
-		50DE451E22142C7400D0D5AA /* OverlayWindowRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayWindowRootViewController.swift; sourceTree = "<group>"; };
-		50DE451F22142C7400D0D5AA /* AnimationPerformerContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationPerformerContract.swift; sourceTree = "<group>"; };
-		50DE452022142C7400D0D5AA /* OverlayFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayFactory.swift; sourceTree = "<group>"; };
-		50DE452122142CDD00D0D5AA /* OverlayManagerContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverlayManagerContract.swift; sourceTree = "<group>"; };
-		5288AF2B57FC5991A272824C8193AA9A /* OLManager-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "OLManager-dummy.m"; sourceTree = "<group>"; };
-		558E144EA3FAE57E76E891B440087906 /* Pods-OLManager_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-OLManager_Tests-umbrella.h"; sourceTree = "<group>"; };
-		5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		5D7021FEEBFE37C870F3D6FEB7B97168 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		630622F7AB150B779AFD28E7EEC7C22E /* Pods-OLManager_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OLManager_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		696F06E1853C1F326FF49B3A0B65BD1F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6CDFDEBA772559B8DA5E3245F5F19A41 /* OLManager-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OLManager-prefix.pch"; sourceTree = "<group>"; };
-		6D9041369685092B7FC8475677BE82CB /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		81D0DB49A57D973D598A68E84368A930 /* OLManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OLManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8C2966B1DCF3BC935694AFB6ECA91E5A /* Pods_OLManager_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OLManager_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8C9BC284C59B84C4A1A9CE34C85EB11E /* Pods-OLManager_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OLManager_Tests-resources.sh"; sourceTree = "<group>"; };
-		8D2A260D375024E6180FFA862CB6789C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		916973F325A9225AEB78CB6F8BAB46FD /* Pods-OLManager_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-OLManager_Tests.modulemap"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		BE8A99CC841B6E1BC71CDD89CC6CED52 /* Pods-OLManager_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OLManager_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		BF10D2EB08B4EDFBCCA3834766382E30 /* OLManager.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = OLManager.xcconfig; sourceTree = "<group>"; };
-		DCAA544DE5DD18B5CE0006EDF3F762AA /* OLManager-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OLManager-umbrella.h"; sourceTree = "<group>"; };
-		FAB06920E5A46A1657D49C2FF671EBF0 /* Pods-OLManager_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-OLManager_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		FEA0507C7839F92C610D44E10740F73F /* Pods-OLManager_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OLManager_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		082E6F619CA179EDEBF929C156E59CDE /* OLManager.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = OLManager.modulemap; sourceTree = "<group>"; };
+		0BD1E20EDACB9889F60F6D5FE98808B5 /* Pods-OLManager_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-OLManager_Tests-umbrella.h"; sourceTree = "<group>"; };
+		0E4547F0BB331890B2110C9F85D51DAB /* OLManager.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = OLManager.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		1237D49133E78F902B96917BB4C74BFA /* BaseViewController+AvailableRegion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "BaseViewController+AvailableRegion.swift"; path = "OLManager/Classes/ServiceLayer/BaseViewController+AvailableRegion.swift"; sourceTree = "<group>"; };
+		13FFC30E39688A31DC9E504B7E022887 /* Pods-OLManager_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OLManager_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		17F1380D3FB194494D06930F3BB526FA /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		28CE6DDCBCDBD9D47AF96989545C3AC5 /* OLManager-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "OLManager-Info.plist"; sourceTree = "<group>"; };
+		2A8FDE6E9C5045D21B8676EF47B4A5C5 /* Pods-OLManager_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-OLManager_Tests-dummy.m"; sourceTree = "<group>"; };
+		2E87F106C7F7365B337933E4CC0AEB5E /* SlideAnimationPerformer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SlideAnimationPerformer.swift; path = OLManager/Classes/ServiceLayer/SlideAnimationPerformer.swift; sourceTree = "<group>"; };
+		303D08287F634102F2E088141B2D5D64 /* FadeInAnimationPerformer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FadeInAnimationPerformer.swift; path = OLManager/Classes/ServiceLayer/FadeInAnimationPerformer.swift; sourceTree = "<group>"; };
+		3209D6B3CEC6BF48111DBE54503F4276 /* Pods-OLManager_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-OLManager_Tests.modulemap"; sourceTree = "<group>"; };
+		4444E83FDE4D6F431BE624D0B30D0319 /* OLManager-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "OLManager-dummy.m"; sourceTree = "<group>"; };
+		4A4B6D5E2F666259268ECD45DCF299F6 /* UIViewController+OverlayInsets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+OverlayInsets.swift"; path = "OLManager/Classes/ServiceLayer/UIViewController+OverlayInsets.swift"; sourceTree = "<group>"; };
+		6664F0A865E05DDA4488F7FD22B87DC5 /* OverlayManagerContract.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OverlayManagerContract.swift; path = OLManager/Classes/ServiceLayer/OverlayManagerContract.swift; sourceTree = "<group>"; };
+		69EAB69D0BE2BF0957C7CF55D2D7F17D /* OverlayFactory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OverlayFactory.swift; path = OLManager/Classes/ServiceLayer/OverlayFactory.swift; sourceTree = "<group>"; };
+		6DF9DDF4C86C5F56E93F0FDB8CBF0CC0 /* OLManager-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OLManager-prefix.pch"; sourceTree = "<group>"; };
+		7314FBF7E5A643B86DE0707476AE46B3 /* Pods-OLManager_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OLManager_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		8037CA52A95F4A48838B81330F049EDD /* OLManager-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OLManager-umbrella.h"; sourceTree = "<group>"; };
+		8ED8D5B5A5F3E2EB58ECC54A164D242D /* OverlayFrameCalculator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OverlayFrameCalculator.swift; path = OLManager/Classes/ServiceLayer/OverlayFrameCalculator.swift; sourceTree = "<group>"; };
+		8F143C78268848AD63D83103C942F6E3 /* OverlayWindow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OverlayWindow.swift; path = OLManager/Classes/ServiceLayer/OverlayWindow.swift; sourceTree = "<group>"; };
+		9953D5011B889689B4E9B2C3350DA9AF /* WeakBox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WeakBox.swift; path = OLManager/Classes/ServiceLayer/WeakBox.swift; sourceTree = "<group>"; };
+		9A24BFBDC222BFD6AE92339CFC495715 /* Pods-OLManager_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OLManager_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		9C2DE9D98194002F3AE79E25F0CEA9DA /* OLManager.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = OLManager.xcconfig; sourceTree = "<group>"; };
+		9CBDC4D5BEDADBE3B7CCF8951730C916 /* AnimationPerformerContract.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationPerformerContract.swift; path = OLManager/Classes/ServiceLayer/AnimationPerformerContract.swift; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A202C632F0ECA31030E5D10172FF14C7 /* DisplayedOverlayRemover.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DisplayedOverlayRemover.swift; path = OLManager/Classes/ServiceLayer/DisplayedOverlayRemover.swift; sourceTree = "<group>"; };
+		A9F5740216F522ED77939267FBB3F055 /* CGRect+Shrinked.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGRect+Shrinked.swift"; path = "OLManager/Classes/ServiceLayer/CGRect+Shrinked.swift"; sourceTree = "<group>"; };
+		AF70906F240938B044188FA1FDFE2FD0 /* OLManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OLManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		CD9BB94E35462EDD8AE9F042D04A1F79 /* Pods-OLManager_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OLManager_Tests-Info.plist"; sourceTree = "<group>"; };
+		D3115FBB0BEB31BB454B06294F0D2042 /* Pods-OLManager_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OLManager_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		D6F13ED947A70149241D0C41C1260949 /* StaticAnimationPerformer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StaticAnimationPerformer.swift; path = OLManager/Classes/ServiceLayer/StaticAnimationPerformer.swift; sourceTree = "<group>"; };
+		DEC888D24E452824BAE4F037332CD497 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		E035DC282CA37F318DA36FE78B607E2A /* AnimationPerformerFactory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationPerformerFactory.swift; path = OLManager/Classes/ServiceLayer/AnimationPerformerFactory.swift; sourceTree = "<group>"; };
+		E32998CAEFE783113538783646BED6A8 /* Pods_OLManager_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OLManager_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E83AA8A98DA2304393B71FD421D5B14C /* OverlayManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OverlayManager.swift; path = OLManager/Classes/ServiceLayer/OverlayManager.swift; sourceTree = "<group>"; };
+		EB0848F821836027B851B82BDBB07F5F /* OverlayWindowRootViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OverlayWindowRootViewController.swift; path = OLManager/Classes/ServiceLayer/OverlayWindowRootViewController.swift; sourceTree = "<group>"; };
+		EB6BDA2E30FFCA87418C3B6FB5992CDE /* OverlayDisplayConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OverlayDisplayConfiguration.swift; path = OLManager/Classes/ServiceLayer/OverlayDisplayConfiguration.swift; sourceTree = "<group>"; };
+		EBAEBAF1196DB9207CFC2781C0D094B2 /* Pods-OLManager_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-OLManager_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2AB41F948AFB2123BFA9266995985696 /* Frameworks */ = {
+		06C28203727B06917C5A683F4E6DCCAF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				51CB434B6C9E1274BD0F2F7C3C66E47C /* Foundation.framework in Frameworks */,
+				A16DD64E5B01612A969FF61ABAB1FB58 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4B03B87751A90F56F38960510F6375B0 /* Frameworks */ = {
+		1650FCB2531C85D95FB6E9444A1C4FD1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50DE450D22141BA500D0D5AA /* UIKit.framework in Frameworks */,
+				8AFC0144AD150F45496CDEFD69C69548 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		219ACF50E529A14CACB17461D8F131C0 /* Pod */ = {
+		1007E6416B8B92868B4A15580F1AF256 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				6D9041369685092B7FC8475677BE82CB /* LICENSE */,
-				2CAA47D1C16B48746A5EADBCDA95D55B /* OLManager.podspec */,
-				5D7021FEEBFE37C870F3D6FEB7B97168 /* README.md */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
-		50DE451022142C7400D0D5AA /* ServiceLayer */ = {
-			isa = PBXGroup;
-			children = (
-				50DE452122142CDD00D0D5AA /* OverlayManagerContract.swift */,
-				50DE451122142C7400D0D5AA /* OverlayManager.swift */,
-				50DE451222142C7400D0D5AA /* DisplayedOverlayRemover.swift */,
-				50DE451322142C7400D0D5AA /* OverlayFrameCalculator.swift */,
-				50DE451422142C7400D0D5AA /* CGRect+Shrinked.swift */,
-				50DE451522142C7400D0D5AA /* AnimationPerformerFactory.swift */,
-				50DE451622142C7400D0D5AA /* WeakBox.swift */,
-				50DE451722142C7400D0D5AA /* BaseViewController+AvailableRegion.swift */,
-				50DE451822142C7400D0D5AA /* UIViewController+OverlayInsets.swift */,
-				50DE451922142C7400D0D5AA /* SlideAnimationPerformer.swift */,
-				50DE451A22142C7400D0D5AA /* FadeInAnimationPerformer.swift */,
-				50DE451B22142C7400D0D5AA /* OverlayDisplayConfiguration.swift */,
-				50DE451C22142C7400D0D5AA /* OverlayWindow.swift */,
-				50DE451D22142C7400D0D5AA /* StaticAnimationPerformer.swift */,
-				50DE451E22142C7400D0D5AA /* OverlayWindowRootViewController.swift */,
-				50DE451F22142C7400D0D5AA /* AnimationPerformerContract.swift */,
-				50DE452022142C7400D0D5AA /* OverlayFactory.swift */,
-			);
-			name = ServiceLayer;
-			path = OLManager/Classes/ServiceLayer;
-			sourceTree = "<group>";
-		};
-		57A58C3C58F9C744052000C8BE9EC882 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				AACDF5EDA8C23A8F917947F54A044CB0 /* Pods-OLManager_Tests */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		5E0D919E635D23B70123790B8308F8EF /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		603063CC23487A90C2804A8203857C7D /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				8D2A260D375024E6180FFA862CB6789C /* Info.plist */,
-				2D51A2BE992B6E2C578712D2F6EA34AB /* OLManager.modulemap */,
-				BF10D2EB08B4EDFBCCA3834766382E30 /* OLManager.xcconfig */,
-				5288AF2B57FC5991A272824C8193AA9A /* OLManager-dummy.m */,
-				6CDFDEBA772559B8DA5E3245F5F19A41 /* OLManager-prefix.pch */,
-				DCAA544DE5DD18B5CE0006EDF3F762AA /* OLManager-umbrella.h */,
+				082E6F619CA179EDEBF929C156E59CDE /* OLManager.modulemap */,
+				9C2DE9D98194002F3AE79E25F0CEA9DA /* OLManager.xcconfig */,
+				4444E83FDE4D6F431BE624D0B30D0319 /* OLManager-dummy.m */,
+				28CE6DDCBCDBD9D47AF96989545C3AC5 /* OLManager-Info.plist */,
+				6DF9DDF4C86C5F56E93F0FDB8CBF0CC0 /* OLManager-prefix.pch */,
+				8037CA52A95F4A48838B81330F049EDD /* OLManager-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "Example/Pods/Target Support Files/OLManager";
 			sourceTree = "<group>";
 		};
-		7DB346D0F39D3F0E887471402A8071AB = {
+		136DBF83815CAA93996E9C20919D02B9 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				AED4B0CD4439D2C3FF9A0C9C5ECFD52A /* Development Pods */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				DDE8BCB3BBC484D93ACA5155A343419A /* Products */,
-				57A58C3C58F9C744052000C8BE9EC882 /* Targets Support Files */,
+				63ADA8D41F42AEE4D2DCB2E58B9D96F4 /* OLManager */,
 			);
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		AACDF5EDA8C23A8F917947F54A044CB0 /* Pods-OLManager_Tests */ = {
+		310761A52EEF871B58383EF5D19583FE /* Pods-OLManager_Tests */ = {
 			isa = PBXGroup;
 			children = (
-				696F06E1853C1F326FF49B3A0B65BD1F /* Info.plist */,
-				916973F325A9225AEB78CB6F8BAB46FD /* Pods-OLManager_Tests.modulemap */,
-				FAB06920E5A46A1657D49C2FF671EBF0 /* Pods-OLManager_Tests-acknowledgements.markdown */,
-				630622F7AB150B779AFD28E7EEC7C22E /* Pods-OLManager_Tests-acknowledgements.plist */,
-				413B9B420F3E8D6150B566E81AE70CB9 /* Pods-OLManager_Tests-dummy.m */,
-				BE8A99CC841B6E1BC71CDD89CC6CED52 /* Pods-OLManager_Tests-frameworks.sh */,
-				8C9BC284C59B84C4A1A9CE34C85EB11E /* Pods-OLManager_Tests-resources.sh */,
-				558E144EA3FAE57E76E891B440087906 /* Pods-OLManager_Tests-umbrella.h */,
-				FEA0507C7839F92C610D44E10740F73F /* Pods-OLManager_Tests.debug.xcconfig */,
-				14E9A8981A180D4A9B1C5EF273C1B7B4 /* Pods-OLManager_Tests.release.xcconfig */,
+				3209D6B3CEC6BF48111DBE54503F4276 /* Pods-OLManager_Tests.modulemap */,
+				EBAEBAF1196DB9207CFC2781C0D094B2 /* Pods-OLManager_Tests-acknowledgements.markdown */,
+				7314FBF7E5A643B86DE0707476AE46B3 /* Pods-OLManager_Tests-acknowledgements.plist */,
+				2A8FDE6E9C5045D21B8676EF47B4A5C5 /* Pods-OLManager_Tests-dummy.m */,
+				D3115FBB0BEB31BB454B06294F0D2042 /* Pods-OLManager_Tests-frameworks.sh */,
+				CD9BB94E35462EDD8AE9F042D04A1F79 /* Pods-OLManager_Tests-Info.plist */,
+				0BD1E20EDACB9889F60F6D5FE98808B5 /* Pods-OLManager_Tests-umbrella.h */,
+				9A24BFBDC222BFD6AE92339CFC495715 /* Pods-OLManager_Tests.debug.xcconfig */,
+				13FFC30E39688A31DC9E504B7E022887 /* Pods-OLManager_Tests.release.xcconfig */,
 			);
 			name = "Pods-OLManager_Tests";
 			path = "Target Support Files/Pods-OLManager_Tests";
 			sourceTree = "<group>";
 		};
-		AED4B0CD4439D2C3FF9A0C9C5ECFD52A /* Development Pods */ = {
+		63ADA8D41F42AEE4D2DCB2E58B9D96F4 /* OLManager */ = {
 			isa = PBXGroup;
 			children = (
-				F0AEE556BAB5113683BB33022A16A919 /* OLManager */,
+				9CBDC4D5BEDADBE3B7CCF8951730C916 /* AnimationPerformerContract.swift */,
+				E035DC282CA37F318DA36FE78B607E2A /* AnimationPerformerFactory.swift */,
+				1237D49133E78F902B96917BB4C74BFA /* BaseViewController+AvailableRegion.swift */,
+				A9F5740216F522ED77939267FBB3F055 /* CGRect+Shrinked.swift */,
+				A202C632F0ECA31030E5D10172FF14C7 /* DisplayedOverlayRemover.swift */,
+				303D08287F634102F2E088141B2D5D64 /* FadeInAnimationPerformer.swift */,
+				EB6BDA2E30FFCA87418C3B6FB5992CDE /* OverlayDisplayConfiguration.swift */,
+				69EAB69D0BE2BF0957C7CF55D2D7F17D /* OverlayFactory.swift */,
+				8ED8D5B5A5F3E2EB58ECC54A164D242D /* OverlayFrameCalculator.swift */,
+				E83AA8A98DA2304393B71FD421D5B14C /* OverlayManager.swift */,
+				6664F0A865E05DDA4488F7FD22B87DC5 /* OverlayManagerContract.swift */,
+				8F143C78268848AD63D83103C942F6E3 /* OverlayWindow.swift */,
+				EB0848F821836027B851B82BDBB07F5F /* OverlayWindowRootViewController.swift */,
+				2E87F106C7F7365B337933E4CC0AEB5E /* SlideAnimationPerformer.swift */,
+				D6F13ED947A70149241D0C41C1260949 /* StaticAnimationPerformer.swift */,
+				4A4B6D5E2F666259268ECD45DCF299F6 /* UIViewController+OverlayInsets.swift */,
+				9953D5011B889689B4E9B2C3350DA9AF /* WeakBox.swift */,
+				EB7C9246D790BF71236C008FFC44F60D /* Pod */,
+				1007E6416B8B92868B4A15580F1AF256 /* Support Files */,
 			);
-			name = "Development Pods";
+			name = OLManager;
+			path = /Users/max/Desktop/OverlaysManager/Pod/OverlaysManager/OLManager;
+			sourceTree = "<absolute>";
+		};
+		717502CB30055014E6A34CF818C9088F /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				310761A52EEF871B58383EF5D19583FE /* Pods-OLManager_Tests */,
+			);
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+		9B055D0CFEA43187E72B03DED11F5662 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				50DE450C22141BA500D0D5AA /* UIKit.framework */,
-				5E0D919E635D23B70123790B8308F8EF /* iOS */,
+				CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */,
 			);
-			name = Frameworks;
+			name = iOS;
 			sourceTree = "<group>";
 		};
-		DDE8BCB3BBC484D93ACA5155A343419A /* Products */ = {
+		CE24C8BEFFEC209EC9369DCF5836655C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				81D0DB49A57D973D598A68E84368A930 /* OLManager.framework */,
-				8C2966B1DCF3BC935694AFB6ECA91E5A /* Pods_OLManager_Tests.framework */,
+				AF70906F240938B044188FA1FDFE2FD0 /* OLManager.framework */,
+				E32998CAEFE783113538783646BED6A8 /* Pods_OLManager_Tests.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F0AEE556BAB5113683BB33022A16A919 /* OLManager */ = {
+		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
-				50DE451022142C7400D0D5AA /* ServiceLayer */,
-				219ACF50E529A14CACB17461D8F131C0 /* Pod */,
-				603063CC23487A90C2804A8203857C7D /* Support Files */,
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				136DBF83815CAA93996E9C20919D02B9 /* Development Pods */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				CE24C8BEFFEC209EC9369DCF5836655C /* Products */,
+				717502CB30055014E6A34CF818C9088F /* Targets Support Files */,
 			);
-			name = OLManager;
-			path = ../..;
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9B055D0CFEA43187E72B03DED11F5662 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EB7C9246D790BF71236C008FFC44F60D /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				DEC888D24E452824BAE4F037332CD497 /* LICENSE */,
+				0E4547F0BB331890B2110C9F85D51DAB /* OLManager.podspec */,
+				17F1380D3FB194494D06930F3BB526FA /* README.md */,
+			);
+			name = Pod;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		57D1DDAB019B455CC5BD4A0D821DEAC3 /* Headers */ = {
+		234F4D6A6DD951844B95AE1A7686DB24 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAC834A1583C9627F340532EA1D231D6 /* OLManager-umbrella.h in Headers */,
+				F419EA880B9AD3EC2A1CDC1BB96C0824 /* Pods-OLManager_Tests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F014BC626A1F0941D4BC4B38BA9223F8 /* Headers */ = {
+		F8544EBAE571B9C7237C401932F9D7A7 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2FA68E2CC4154FEF8AD747693B201B3 /* Pods-OLManager_Tests-umbrella.h in Headers */,
+				40AB1D2EBBBEFA0ADE20818C74BC9961 /* OLManager-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		403FDCF50C152CDE33CC2A995D02C8D2 /* OLManager */ = {
+		08DE9290B1709613D2CD632952D9C15F /* Pods-OLManager_Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 626A47015F79E234128EDE8275E372C7 /* Build configuration list for PBXNativeTarget "OLManager" */;
+			buildConfigurationList = DFCC680465A98352552467D5E742A086 /* Build configuration list for PBXNativeTarget "Pods-OLManager_Tests" */;
 			buildPhases = (
-				BE80373CE1E9DB161E2A76D9797F6858 /* Sources */,
-				4B03B87751A90F56F38960510F6375B0 /* Frameworks */,
-				57D1DDAB019B455CC5BD4A0D821DEAC3 /* Headers */,
+				234F4D6A6DD951844B95AE1A7686DB24 /* Headers */,
+				0FFDC1E9C777D5AF370E8E2ED09672C0 /* Sources */,
+				06C28203727B06917C5A683F4E6DCCAF /* Frameworks */,
+				167DCABC8862720C19BCDF79262C1CBE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D010C3329C7E77EEAF52FB44D4C48FB0 /* PBXTargetDependency */,
+			);
+			name = "Pods-OLManager_Tests";
+			productName = "Pods-OLManager_Tests";
+			productReference = E32998CAEFE783113538783646BED6A8 /* Pods_OLManager_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6158448B9D72A92734754657D7822256 /* OLManager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3253F8FEB93D172AA5D9EFFBAC791FE1 /* Build configuration list for PBXNativeTarget "OLManager" */;
+			buildPhases = (
+				F8544EBAE571B9C7237C401932F9D7A7 /* Headers */,
+				66AD3091C15C22D73364F59884A307C5 /* Sources */,
+				1650FCB2531C85D95FB6E9444A1C4FD1 /* Frameworks */,
+				D636A0CEAEBC234085FD6C60C9F5DB56 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -257,92 +280,102 @@
 			);
 			name = OLManager;
 			productName = OLManager;
-			productReference = 81D0DB49A57D973D598A68E84368A930 /* OLManager.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		5DC54F77AD842D6DBC0D8E6ABB5FBD97 /* Pods-OLManager_Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 21AB3701D11665C90157D049D2636578 /* Build configuration list for PBXNativeTarget "Pods-OLManager_Tests" */;
-			buildPhases = (
-				FE0A2587DAE6228A4E9A553BD34F099E /* Sources */,
-				2AB41F948AFB2123BFA9266995985696 /* Frameworks */,
-				F014BC626A1F0941D4BC4B38BA9223F8 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				8870B39DEC751249CF1F8B2BB36BCB6B /* PBXTargetDependency */,
-			);
-			name = "Pods-OLManager_Tests";
-			productName = "Pods-OLManager_Tests";
-			productReference = 8C2966B1DCF3BC935694AFB6ECA91E5A /* Pods_OLManager_Tests.framework */;
+			productReference = AF70906F240938B044188FA1FDFE2FD0 /* OLManager.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
 				LastUpgradeCheck = 0930;
-				TargetAttributes = {
-					403FDCF50C152CDE33CC2A995D02C8D2 = {
-						LastSwiftMigration = 1010;
-					};
-				};
 			};
-			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = DDE8BCB3BBC484D93ACA5155A343419A /* Products */;
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = CE24C8BEFFEC209EC9369DCF5836655C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				403FDCF50C152CDE33CC2A995D02C8D2 /* OLManager */,
-				5DC54F77AD842D6DBC0D8E6ABB5FBD97 /* Pods-OLManager_Tests */,
+				6158448B9D72A92734754657D7822256 /* OLManager */,
+				08DE9290B1709613D2CD632952D9C15F /* Pods-OLManager_Tests */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXSourcesBuildPhase section */
-		BE80373CE1E9DB161E2A76D9797F6858 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
+/* Begin PBXResourcesBuildPhase section */
+		167DCABC8862720C19BCDF79262C1CBE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50DE452222142CDD00D0D5AA /* OverlayManagerContract.swift in Sources */,
-				354A2362860BCE5B0967CFCC78CA4592 /* OLManager-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FE0A2587DAE6228A4E9A553BD34F099E /* Sources */ = {
+		D636A0CEAEBC234085FD6C60C9F5DB56 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0FFDC1E9C777D5AF370E8E2ED09672C0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				104746F5598D33BD09C1D55B40BA305D /* Pods-OLManager_Tests-dummy.m in Sources */,
+				0FAB8E879F054AAA0DF4936E5D8816C1 /* Pods-OLManager_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66AD3091C15C22D73364F59884A307C5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FAEE479887840234470834388CB245B /* AnimationPerformerContract.swift in Sources */,
+				6706B999D932F0A150F27B21601524A6 /* AnimationPerformerFactory.swift in Sources */,
+				97E7822AD0BB10A321A0BF2178439623 /* BaseViewController+AvailableRegion.swift in Sources */,
+				DA542A2EDA52A1CA11E599F14CD25756 /* CGRect+Shrinked.swift in Sources */,
+				C034E21CC61A37E682E5721A1F2F0DBA /* DisplayedOverlayRemover.swift in Sources */,
+				041662BE39859B0CADCC53423C73C04E /* FadeInAnimationPerformer.swift in Sources */,
+				2CD2C8808AE89733E6FF6DC0CC0E838D /* OLManager-dummy.m in Sources */,
+				AECA59AC0FBC9DFBBA551FFE4A33851B /* OverlayDisplayConfiguration.swift in Sources */,
+				005B63DC90BFD357921DE9D2A99B4EC7 /* OverlayFactory.swift in Sources */,
+				C011D5911AB44FC8BDA514A50F115BA8 /* OverlayFrameCalculator.swift in Sources */,
+				0940D20212611174C8EA4F6F6C0778BA /* OverlayManager.swift in Sources */,
+				68E837B1FF5B39EA135D65577B60C1E5 /* OverlayManagerContract.swift in Sources */,
+				7356A2E8F7ADD71E158D063D7D6E6968 /* OverlayWindow.swift in Sources */,
+				0747E187848A926C85F25A778B71BED1 /* OverlayWindowRootViewController.swift in Sources */,
+				8B8CD854C0271E8E9C1133DB2B27925A /* SlideAnimationPerformer.swift in Sources */,
+				B84FB5F5CE865CF89C2666B181639A5F /* StaticAnimationPerformer.swift in Sources */,
+				530F597379752C01700C3C684BA7CC29 /* UIViewController+OverlayInsets.swift in Sources */,
+				97BDD6F0763407C42E481DC322B06AD8 /* WeakBox.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		8870B39DEC751249CF1F8B2BB36BCB6B /* PBXTargetDependency */ = {
+		D010C3329C7E77EEAF52FB44D4C48FB0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = OLManager;
-			target = 403FDCF50C152CDE33CC2A995D02C8D2 /* OLManager */;
-			targetProxy = 110AC0D4BEB1B7A17A0ACE31CA03F2EC /* PBXContainerItemProxy */;
+			target = 6158448B9D72A92734754657D7822256 /* OLManager */;
+			targetProxy = 4A5A1955682E9FDE4C03CEEAD98EE143 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1DD371713050488725A446A0C501811D /* Release */ = {
+		3F8E5970E1E241BAD0586EC3C17F2699 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 14E9A8981A180D4A9B1C5EF273C1B7B4 /* Pods-OLManager_Tests.release.xcconfig */;
+			baseConfigurationReference = 9A24BFBDC222BFD6AE92339CFC495715 /* Pods-OLManager_Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -354,7 +387,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-OLManager_Tests/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-OLManager_Tests/Pods-OLManager_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -367,7 +400,37 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5D2131442095335C2A0900F4F163586A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C2DE9D98194002F3AE79E25F0CEA9DA /* OLManager.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/OLManager/OLManager-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/OLManager/OLManager-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/OLManager/OLManager.modulemap";
+				PRODUCT_MODULE_NAME = OLManager;
+				PRODUCT_NAME = OLManager;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -375,9 +438,9 @@
 			};
 			name = Release;
 		};
-		72AEE32A64C86AFD11EEAB584BB77708 /* Debug */ = {
+		5E71C9BC8DF98C30320DBB304050C99D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FEA0507C7839F92C610D44E10740F73F /* Pods-OLManager_Tests.debug.xcconfig */;
+			baseConfigurationReference = 13FFC30E39688A31DC9E504B7E022887 /* Pods-OLManager_Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -389,7 +452,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-OLManager_Tests/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-OLManager_Tests/Pods-OLManager_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -402,15 +465,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
-		8B33C5230DE4A9DFA6D8F46505DD7AF7 /* Debug */ = {
+		AB4D69770D8ACE3A05E80BB3502666F6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -442,8 +504,6 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_ALLOWED = NO;
-				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -464,20 +524,22 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		97AE930634C4CE25FCAA90E781779005 /* Debug */ = {
+		ABDA5B810A8718220CF11AA7A9ABA2C3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BF10D2EB08B4EDFBCCA3834766382E30 /* OLManager.xcconfig */;
+			baseConfigurationReference = 9C2DE9D98194002F3AE79E25F0CEA9DA /* OLManager.xcconfig */;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -488,7 +550,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GCC_PREFIX_HEADER = "Target Support Files/OLManager/OLManager-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/OLManager/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/OLManager/OLManager-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -498,15 +560,14 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		B42B54097A876E8A982CBF5DAA91B1AB /* Release */ = {
+		F232B5ECA11A71BFA199A229B323F454 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -538,8 +599,6 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_ALLOWED = NO;
-				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -558,77 +617,46 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Release;
-		};
-		E849CC158C7703351D8460F10D37086F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BF10D2EB08B4EDFBCCA3834766382E30 /* OLManager.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/OLManager/OLManager-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/OLManager/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/OLManager/OLManager.modulemap";
-				PRODUCT_MODULE_NAME = OLManager;
-				PRODUCT_NAME = OLManager;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		21AB3701D11665C90157D049D2636578 /* Build configuration list for PBXNativeTarget "Pods-OLManager_Tests" */ = {
+		3253F8FEB93D172AA5D9EFFBAC791FE1 /* Build configuration list for PBXNativeTarget "OLManager" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				72AEE32A64C86AFD11EEAB584BB77708 /* Debug */,
-				1DD371713050488725A446A0C501811D /* Release */,
+				ABDA5B810A8718220CF11AA7A9ABA2C3 /* Debug */,
+				5D2131442095335C2A0900F4F163586A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8B33C5230DE4A9DFA6D8F46505DD7AF7 /* Debug */,
-				B42B54097A876E8A982CBF5DAA91B1AB /* Release */,
+				AB4D69770D8ACE3A05E80BB3502666F6 /* Debug */,
+				F232B5ECA11A71BFA199A229B323F454 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		626A47015F79E234128EDE8275E372C7 /* Build configuration list for PBXNativeTarget "OLManager" */ = {
+		DFCC680465A98352552467D5E742A086 /* Build configuration list for PBXNativeTarget "Pods-OLManager_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				97AE930634C4CE25FCAA90E781779005 /* Debug */,
-				E849CC158C7703351D8460F10D37086F /* Release */,
+				3F8E5970E1E241BAD0586EC3C17F2699 /* Debug */,
+				5E71C9BC8DF98C30320DBB304050C99D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 }

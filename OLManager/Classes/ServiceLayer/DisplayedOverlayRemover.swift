@@ -19,7 +19,7 @@ public final class DisplayedOverlayRemover {
     }
 }
 
-extension DisplayedOverlayRemover {
+public extension DisplayedOverlayRemover {
     
     func removeOverlay(animated: Bool) {
         defer {

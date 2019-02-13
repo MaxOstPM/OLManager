@@ -54,7 +54,7 @@ public final class OverlayManagerOf<OverlayFactoryImp: OverlayFactory>: OverlayM
         }
     }
     
-    init(factory: OverlayFactoryImp) {
+    public init(factory: OverlayFactoryImp) {
         animationPerformerFactory = AnimationPerformerFactoryImp()
         map = [BaseVCBox: [OverlayContainer]]()
         overlaysFactory = factory
@@ -62,7 +62,7 @@ public final class OverlayManagerOf<OverlayFactoryImp: OverlayFactory>: OverlayM
 }
 
 // MARK: - OverlayManager
-extension OverlayManagerOf {
+public extension OverlayManagerOf {
 
     func addOverlayWindowWithFrame(_ frame: CGRect, level: UIWindow.Level) {
         let window = OverlayWindow(frame: frame)
@@ -126,7 +126,7 @@ private extension OverlayManagerOf {
 // MARK: - OverlayRemovable
 extension OverlayManagerOf: OverlayRemovable {
 
-    func removeOverlay(_ overlay: UIView, animated: Bool) {
+    public func removeOverlay(_ overlay: UIView, animated: Bool) {
         let neededContainerArray = currentOverlayContainers.filter({ return $0.overlay == overlay })
         if let container = neededContainerArray.first {
             container.animator.removeOverlay(animated: animated) { [weak self] in
@@ -141,7 +141,7 @@ extension OverlayManagerOf: OverlayRemovable {
 // MARK: - ViewControllerObservable
 extension OverlayManagerOf: ViewControllerObservable {
     
-    func viewControllerBecomeActive(_ viewController: UIViewController) {
+    public func viewControllerBecomeActive(_ viewController: UIViewController) {
         self.currentViewController = viewController
         displayExistedOverlays()
     }

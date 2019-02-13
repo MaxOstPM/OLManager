@@ -1,6 +1,5 @@
 use_frameworks!
 target 'OLManager_Tests' do
-  pod 'OLManager', :path => '../'
-  
-  
+  pod 'OLManager', :path => '/Users/max/Desktop/OverlaysManager/Pod/OverlaysManager/OLManager'
+
 end
