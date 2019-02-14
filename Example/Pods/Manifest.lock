@@ -1,5 +1,5 @@
 PODS:
-  - OLManager (1.0.11)
+  - OLManager (1.0.15)
 
 DEPENDENCIES:
   - OLManager (from `/Users/max/Desktop/OverlaysManager/Pod/OverlaysManager/OLManager`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "/Users/max/Desktop/OverlaysManager/Pod/OverlaysManager/OLManager"
 
 SPEC CHECKSUMS:
-  OLManager: d08aea03b2d43574bf5dc4d4df5573a72a3098ff
+  OLManager: 209c0e9da045e45f453d2eeff4e642c87449d3bb
 
 PODFILE CHECKSUM: fbe327bc8b72d04f2cb2f88073924f068e3d5214
 
