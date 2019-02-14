@@ -8,7 +8,11 @@
 
 import UIKit
 
-public final class DisplayedOverlayRemover {
+public protocol OverlayRemover {
+    func removeOverlay(animated: Bool)
+}
+
+public final class OverlayRemoverImp: OverlayRemover {
     
     private weak var overlay: UIView?
     private weak var overlayRemovable: OverlayRemovable?
@@ -19,7 +23,7 @@ public final class DisplayedOverlayRemover {
     }
 }
 
-public extension DisplayedOverlayRemover {
+public extension OverlayRemoverImp {
     
     func removeOverlay(animated: Bool) {
         defer {

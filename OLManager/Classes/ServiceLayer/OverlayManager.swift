@@ -15,7 +15,7 @@ public protocol OverlayManager {
     
     associatedtype OverlayFactoryImp: OverlayFactory
     
-    func displayOverlay(_ overlay: OverlayFactoryImp.OverlayType, configuration: OverlayDisplayConfiguration) -> DisplayedOverlayRemover?
+    func displayOverlay(_ overlay: OverlayFactoryImp.OverlayType, configuration: OverlayDisplayConfiguration) -> OverlayRemover?
     
     func addOverlayWindowWithFrame(_ frame: CGRect, level: UIWindow.Level)
 
@@ -73,7 +73,7 @@ public extension OverlayManagerOf {
         overlayWindow = window
     }
     
-    func displayOverlay(_ overlay: OverlayFactoryImp.OverlayType, configuration: OverlayDisplayConfiguration) -> DisplayedOverlayRemover? {
+    func displayOverlay(_ overlay: OverlayFactoryImp.OverlayType, configuration: OverlayDisplayConfiguration) -> OverlayRemover? {
         
         guard
             let rootVC = overlayWindow?.overlayViewController,
@@ -93,7 +93,7 @@ public extension OverlayManagerOf {
         removeZombiesOverlays()
         animator.displayOverlay()
         
-        return DisplayedOverlayRemover(overlay: overlayView, overlayRemovable: self)
+        return OverlayRemoverImp(overlay: overlayView, overlayRemovable: self)
     }
     
     func hideOverlays(animated: Bool) {

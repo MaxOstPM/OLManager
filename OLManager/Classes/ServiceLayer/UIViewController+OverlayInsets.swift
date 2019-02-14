@@ -10,7 +10,7 @@ import UIKit
 
 extension UIViewController {
     
-    @objc public var overlayInsets: UIEdgeInsets {
+    @objc open var overlayInsets: UIEdgeInsets {
         return UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)
     }
 }
