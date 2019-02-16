@@ -16,17 +16,23 @@ final class OverlayManagerProvider {
     
     static let provider = OverlayManagerProvider()
     
-    var overlayManager: OverlayManagerOf<OverlayFactoryImp> {
+    var overlayManager: OverlayManagerOf<OverlayFactoryImp>
+    
+    init() {
         let factory = OverlayFactoryImp()
-        return OverlayManagerOf<OverlayFactoryImp>(factory: factory)
+        overlayManager = OverlayManagerOf<OverlayFactoryImp>(factory: factory)
     }
 }
 
 final class TestClass: UIViewController {
     
+    let overlayManager = OverlayManagerProvider.provider.overlayManager
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let configuration = OverlayDisplayConfiguration(pinToEdge: .top, animationType: .none)
+        let remover = overlayManager.displayOverlay(.paidSocialFailure, configuration: configuration)
     }
     
     @objc override var overlayInsets: UIEdgeInsets {

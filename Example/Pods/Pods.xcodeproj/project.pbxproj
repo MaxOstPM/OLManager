@@ -12,7 +12,7 @@
 		0C90C77BEEA9B16EB3B4841BFFFDCCCC /* SlideAnimationPerformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66629A751F6A32FDBB761D04C0C7A2E /* SlideAnimationPerformer.swift */; };
 		0FAB8E879F054AAA0DF4936E5D8816C1 /* Pods-OLManager_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A8FDE6E9C5045D21B8676EF47B4A5C5 /* Pods-OLManager_Tests-dummy.m */; };
 		15546356565E3541C53620DBB5077375 /* OverlayWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189D0D0633BE0DBC313CD1690E6A8C31 /* OverlayWindow.swift */; };
-		3894862644BD9FC607C3E60623848F47 /* DisplayedOverlayRemover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98543DAA9C7B7C4E54E201BB4401B92B /* DisplayedOverlayRemover.swift */; };
+		3894862644BD9FC607C3E60623848F47 /* OverlayManageable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98543DAA9C7B7C4E54E201BB4401B92B /* OverlayManageable.swift */; };
 		40AB1D2EBBBEFA0ADE20818C74BC9961 /* OLManager-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EE81D78EB3B480993D51B2EF8292675E /* OLManager-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5CF42FE2603FE7F90C8E3C79E0CFB9F1 /* FadeInAnimationPerformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C8D462AA3E5B31B122B9598433C42B /* FadeInAnimationPerformer.swift */; };
 		5E5C862A47B63BBBFC7648854EF2F73E /* OverlayDisplayConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776CE28FC6AA5E76B45ED1845BB8C1D7 /* OverlayDisplayConfiguration.swift */; };
@@ -43,14 +43,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		01BAB9156D97E42B18AC8C5A48E4512E /* OLManager.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = OLManager.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		01BAB9156D97E42B18AC8C5A48E4512E /* OLManager.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = OLManager.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		0BD1E20EDACB9889F60F6D5FE98808B5 /* Pods-OLManager_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-OLManager_Tests-umbrella.h"; sourceTree = "<group>"; };
 		0F32AB72F7FF09417989411D4FA0AD86 /* AnimationPerformerContract.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AnimationPerformerContract.swift; sourceTree = "<group>"; };
 		13FFC30E39688A31DC9E504B7E022887 /* Pods-OLManager_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OLManager_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		189D0D0633BE0DBC313CD1690E6A8C31 /* OverlayWindow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OverlayWindow.swift; sourceTree = "<group>"; };
 		2A8FDE6E9C5045D21B8676EF47B4A5C5 /* Pods-OLManager_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-OLManager_Tests-dummy.m"; sourceTree = "<group>"; };
 		2BD57068464F9C624CCADC85E95ECC24 /* OLManager.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = OLManager.xcconfig; sourceTree = "<group>"; };
-		2FBF3CE452CAE2966BB8CD9654A86DAD /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		2FBF3CE452CAE2966BB8CD9654A86DAD /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		3209D6B3CEC6BF48111DBE54503F4276 /* Pods-OLManager_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-OLManager_Tests.modulemap"; sourceTree = "<group>"; };
 		34D677B3DDF02EA2FC1AF312158F5A84 /* UIViewController+AvailableRegion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIViewController+AvailableRegion.swift"; sourceTree = "<group>"; };
 		528C790E648F4391BBABC1E2FE7E39B2 /* OLManager-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OLManager-prefix.pch"; sourceTree = "<group>"; };
@@ -64,23 +64,23 @@
 		799564225662E022A0BBC3B1A2203F61 /* OverlayManagerContract.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OverlayManagerContract.swift; sourceTree = "<group>"; };
 		8FB8501194BF411F468B1DF3435270B6 /* OverlayWindowRootViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OverlayWindowRootViewController.swift; sourceTree = "<group>"; };
 		96BC8E62CF200DCCC7B260376070DFEA /* OverlayFactory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OverlayFactory.swift; sourceTree = "<group>"; };
-		98543DAA9C7B7C4E54E201BB4401B92B /* DisplayedOverlayRemover.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DisplayedOverlayRemover.swift; sourceTree = "<group>"; };
+		98543DAA9C7B7C4E54E201BB4401B92B /* OverlayManageable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OverlayManageable.swift; sourceTree = "<group>"; };
 		9A24BFBDC222BFD6AE92339CFC495715 /* Pods-OLManager_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OLManager_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A292FD306C5643D8B2907F1C20A923E0 /* AnimationPerformerFactory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AnimationPerformerFactory.swift; sourceTree = "<group>"; };
-		AF70906F240938B044188FA1FDFE2FD0 /* OLManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = OLManager.framework; path = OLManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF70906F240938B044188FA1FDFE2FD0 /* OLManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OLManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3C8D462AA3E5B31B122B9598433C42B /* FadeInAnimationPerformer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FadeInAnimationPerformer.swift; sourceTree = "<group>"; };
 		B66629A751F6A32FDBB761D04C0C7A2E /* SlideAnimationPerformer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SlideAnimationPerformer.swift; sourceTree = "<group>"; };
 		CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		CD9BB94E35462EDD8AE9F042D04A1F79 /* Pods-OLManager_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OLManager_Tests-Info.plist"; sourceTree = "<group>"; };
 		D3115FBB0BEB31BB454B06294F0D2042 /* Pods-OLManager_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OLManager_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		D3BB1C309B72280F5CE39626589C1161 /* OLManager-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "OLManager-dummy.m"; sourceTree = "<group>"; };
-		E32998CAEFE783113538783646BED6A8 /* Pods_OLManager_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_OLManager_Tests.framework; path = "Pods-OLManager_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E32998CAEFE783113538783646BED6A8 /* Pods_OLManager_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OLManager_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3AB4B3EAFC9FA674751B5BF2CA1CFCD /* WeakBox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WeakBox.swift; sourceTree = "<group>"; };
 		EA05A516C22C080B9122D3E2AEB7C331 /* OLManager-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "OLManager-Info.plist"; sourceTree = "<group>"; };
 		EBAEBAF1196DB9207CFC2781C0D094B2 /* Pods-OLManager_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-OLManager_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		EE81D78EB3B480993D51B2EF8292675E /* OLManager-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OLManager-umbrella.h"; sourceTree = "<group>"; };
-		EF983F740E99BBEEA313D3543C729508 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		EF983F740E99BBEEA313D3543C729508 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F449DC6D1ED6F81138F49CBAA5B513B4 /* StaticAnimationPerformer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StaticAnimationPerformer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,7 +113,6 @@
 				B66629A751F6A32FDBB761D04C0C7A2E /* SlideAnimationPerformer.swift */,
 				F449DC6D1ED6F81138F49CBAA5B513B4 /* StaticAnimationPerformer.swift */,
 			);
-			name = AnimationPerformer;
 			path = AnimationPerformer;
 			sourceTree = "<group>";
 		};
@@ -169,13 +168,12 @@
 		5F7179CACF895F0C380842900D5C2449 /* OverlayManager */ = {
 			isa = PBXGroup;
 			children = (
-				98543DAA9C7B7C4E54E201BB4401B92B /* DisplayedOverlayRemover.swift */,
+				98543DAA9C7B7C4E54E201BB4401B92B /* OverlayManageable.swift */,
 				776CE28FC6AA5E76B45ED1845BB8C1D7 /* OverlayDisplayConfiguration.swift */,
 				96BC8E62CF200DCCC7B260376070DFEA /* OverlayFactory.swift */,
 				708E992E4A1D5C189AA9608F6BEF9A4A /* OverlayManager.swift */,
 				799564225662E022A0BBC3B1A2203F61 /* OverlayManagerContract.swift */,
 			);
-			name = OverlayManager;
 			path = OverlayManager;
 			sourceTree = "<group>";
 		};
@@ -388,7 +386,7 @@
 				7DE035481FA6494E2DF0D3B801E1939F /* AnimationPerformerContract.swift in Sources */,
 				A97CA8C872530019485030A18C8FF857 /* AnimationPerformerFactory.swift in Sources */,
 				B3981421BB3754B4E1904E1DA4E567B4 /* CGRect+Shrinked.swift in Sources */,
-				3894862644BD9FC607C3E60623848F47 /* DisplayedOverlayRemover.swift in Sources */,
+				3894862644BD9FC607C3E60623848F47 /* OverlayManageable.swift in Sources */,
 				5CF42FE2603FE7F90C8E3C79E0CFB9F1 /* FadeInAnimationPerformer.swift in Sources */,
 				64291C1453D0FD3C89968C5B08A6D48A /* OLManager-dummy.m in Sources */,
 				5E5C862A47B63BBBFC7648854EF2F73E /* OverlayDisplayConfiguration.swift in Sources */,
@@ -665,8 +663,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
 			};

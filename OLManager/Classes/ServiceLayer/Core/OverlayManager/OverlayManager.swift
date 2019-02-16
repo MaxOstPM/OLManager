@@ -15,7 +15,7 @@ public protocol OverlayManager {
     
     associatedtype OverlayFactoryImp: OverlayFactory
     
-    func displayOverlay(_ overlay: OverlayFactoryImp.OverlayType, configuration: OverlayDisplayConfiguration) -> OverlayRemover?
+    func displayOverlay(_ overlay: OverlayFactoryImp.OverlayType, configuration: OverlayDisplayConfiguration) -> OverlayManageable?
     
     func addOverlayWindowWithFrame(_ frame: CGRect, level: UIWindow.Level)
 
@@ -33,7 +33,7 @@ public final class OverlayManagerOf<OverlayFactoryImp: OverlayFactory>: OverlayM
     
     private var overlayWindow: OverlayWindow?
     private var currentViewController: UIViewController?
-    private var currentBox: BaseVCBox? {
+    private var currentViewControllerBox: BaseVCBox? {
         if let viewController = currentViewController {
             return WeakBox.init(viewController)
         } else {
@@ -42,13 +42,13 @@ public final class OverlayManagerOf<OverlayFactoryImp: OverlayFactory>: OverlayM
     }
     private var currentOverlayContainers: [OverlayContainer] {
         get {
-            if let box = currentBox, let currentContainers = map[box] {
+            if let box = currentViewControllerBox, let currentContainers = map[box] {
                 return currentContainers
             }
             return []
         }
         set {
-            if let box = currentBox {
+            if let box = currentViewControllerBox {
                 map.updateValue(newValue, forKey: box)
             }
         }
@@ -73,7 +73,7 @@ public extension OverlayManagerOf {
         overlayWindow = window
     }
     
-    func displayOverlay(_ overlay: OverlayFactoryImp.OverlayType, configuration: OverlayDisplayConfiguration) -> OverlayRemover? {
+    func displayOverlay(_ overlay: OverlayFactoryImp.OverlayType, configuration: OverlayDisplayConfiguration) -> OverlayManageable? {
         
         guard
             let rootVC = overlayWindow?.overlayViewController,
@@ -93,7 +93,7 @@ public extension OverlayManagerOf {
         removeZombiesOverlays()
         animator.displayOverlay()
         
-        return OverlayRemoverImp(overlay: overlayView, overlayRemovable: self)
+        return OverlayManageableImp(overlay: overlayView, overlayManageble: self)
     }
     
     func hideOverlays(animated: Bool) {
@@ -124,17 +124,36 @@ private extension OverlayManagerOf {
 }
 
 // MARK: - OverlayRemovable
-extension OverlayManagerOf: OverlayRemovable {
+extension OverlayManagerOf: OverlayManageableConnection {
 
-    public func removeOverlay(_ overlay: UIView, animated: Bool) {
-        let neededContainerArray = currentOverlayContainers.filter({ return $0.overlay == overlay })
-        if let container = neededContainerArray.first {
-            container.animator.removeOverlay(animated: animated) { [weak self] in
-                guard let strongSelf = self else { return }
-                strongSelf.currentOverlayContainers = strongSelf.currentOverlayContainers.filter({ return $0.overlay != overlay })
-                strongSelf.removeZombiesOverlays()
-            }
+    internal func removeOverlay(_ overlay: UIView, animated: Bool) {
+        guard let container = getContainerFor(overlay) else {
+            return
         }
+        container.animator.removeOverlay(animated: animated) { [weak self] in
+            guard let strongSelf = self else { return }
+            strongSelf.currentOverlayContainers = strongSelf.currentOverlayContainers.filter({ return $0.overlay != overlay })
+            strongSelf.removeZombiesOverlays()
+        }
+    }
+    
+    internal func hideOverlay(_ overlay: UIView, animated: Bool) {
+        guard let container = getContainerFor(overlay) else {
+            return
+        }
+        container.animator.removeOverlay(animated: animated, completion: nil)
+    }
+    
+    internal func showOverlay(_ overlay: UIView, animated: Bool) {
+        guard let container = getContainerFor(overlay) else {
+            return
+        }
+        container.animator.displayOverlay()
+    }
+    
+    private func getContainerFor(_ overlay: UIView) -> OverlayContainer? {
+        let neededContainerArray = currentOverlayContainers.filter({ return $0.overlay == overlay })
+        return neededContainerArray.first
     }
 }
 

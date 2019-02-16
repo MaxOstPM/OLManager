@@ -19,6 +19,9 @@ public protocol ViewControllerObservable {
     func viewControllerBecomeActive(_ viewController: UIViewController)
 }
 
-protocol OverlayRemovable: class {
+// TODO: Rename
+protocol OverlayManageableConnection: class {
     func removeOverlay(_ overlay: UIView, animated: Bool)
+    func hideOverlay(_ overlay: UIView, animated: Bool)
+    func showOverlay(_ overlay: UIView, animated: Bool)
 }
