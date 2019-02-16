@@ -31,8 +31,9 @@ final class TestClass: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let configuration = OverlayDisplayConfiguration(pinToEdge: .top, animationType: .none)
-        let remover = overlayManager.displayOverlay(.paidSocialFailure, configuration: configuration)
+        let location = PinningLocation(verticalEdge: .top)
+        let configuration = OverlayDisplayConfiguration(animationType: .none, pinningLocation: location)
+        _ = overlayManager.displayOverlay(.paidSocialFailure, configuration: configuration)
     }
     
     @objc override var overlayInsets: UIEdgeInsets {

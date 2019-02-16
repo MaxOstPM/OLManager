@@ -14,6 +14,7 @@
 		15546356565E3541C53620DBB5077375 /* OverlayWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189D0D0633BE0DBC313CD1690E6A8C31 /* OverlayWindow.swift */; };
 		3894862644BD9FC607C3E60623848F47 /* OverlayManageable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98543DAA9C7B7C4E54E201BB4401B92B /* OverlayManageable.swift */; };
 		40AB1D2EBBBEFA0ADE20818C74BC9961 /* OLManager-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EE81D78EB3B480993D51B2EF8292675E /* OLManager-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50F1A48122184B9000375FCA /* PinningLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F1A48022184B9000375FCA /* PinningLocation.swift */; };
 		5CF42FE2603FE7F90C8E3C79E0CFB9F1 /* FadeInAnimationPerformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C8D462AA3E5B31B122B9598433C42B /* FadeInAnimationPerformer.swift */; };
 		5E5C862A47B63BBBFC7648854EF2F73E /* OverlayDisplayConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776CE28FC6AA5E76B45ED1845BB8C1D7 /* OverlayDisplayConfiguration.swift */; };
 		64291C1453D0FD3C89968C5B08A6D48A /* OLManager-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D3BB1C309B72280F5CE39626589C1161 /* OLManager-dummy.m */; };
@@ -53,6 +54,7 @@
 		2FBF3CE452CAE2966BB8CD9654A86DAD /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		3209D6B3CEC6BF48111DBE54503F4276 /* Pods-OLManager_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-OLManager_Tests.modulemap"; sourceTree = "<group>"; };
 		34D677B3DDF02EA2FC1AF312158F5A84 /* UIViewController+AvailableRegion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIViewController+AvailableRegion.swift"; sourceTree = "<group>"; };
+		50F1A48022184B9000375FCA /* PinningLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinningLocation.swift; sourceTree = "<group>"; };
 		528C790E648F4391BBABC1E2FE7E39B2 /* OLManager-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OLManager-prefix.pch"; sourceTree = "<group>"; };
 		5FBBE98848488366789B17BAD745C675 /* OverlayFrameCalculator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OverlayFrameCalculator.swift; sourceTree = "<group>"; };
 		6470173E0A7B8627AE5DBCCA43C5C6DA /* OLManager.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = OLManager.modulemap; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 				189D0D0633BE0DBC313CD1690E6A8C31 /* OverlayWindow.swift */,
 				8FB8501194BF411F468B1DF3435270B6 /* OverlayWindowRootViewController.swift */,
 				E3AB4B3EAFC9FA674751B5BF2CA1CFCD /* WeakBox.swift */,
+				50F1A48022184B9000375FCA /* PinningLocation.swift */,
 			);
 			name = Common;
 			path = OLManager/Classes/ServiceLayer/Common;
@@ -394,6 +397,7 @@
 				01BD227B0191B5466FDE9DD28E29BBD0 /* OverlayFrameCalculator.swift in Sources */,
 				75E6DEEC5C5DFB05271485D93BF4659C /* OverlayManager.swift in Sources */,
 				AD8CBEAA8082AF71D4ED316AEB147CC2 /* OverlayManagerContract.swift in Sources */,
+				50F1A48122184B9000375FCA /* PinningLocation.swift in Sources */,
 				15546356565E3541C53620DBB5077375 /* OverlayWindow.swift in Sources */,
 				D56A2185CAEB8B997149EE0867E2CDB4 /* OverlayWindowRootViewController.swift in Sources */,
 				0C90C77BEEA9B16EB3B4841BFFFDCCCC /* SlideAnimationPerformer.swift in Sources */,

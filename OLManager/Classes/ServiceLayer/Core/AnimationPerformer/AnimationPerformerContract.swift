@@ -60,7 +60,7 @@ class BaseAnimationPerformer: AnimationPerformer {
 extension BaseAnimationPerformer {
     
     func setupOverlayFrame() {
-        overlay.frame = overlayFrameCalculator.makeFrameFor(overlay: overlay, inside: availableRegion, onEdge: displayConfig.pinningEdge)
+        overlay.frame = overlayFrameCalculator.makeFrameFor(overlay: overlay, inside: availableRegion, with: displayConfig)
     }
     
     func addOverlayOnSuperview() {

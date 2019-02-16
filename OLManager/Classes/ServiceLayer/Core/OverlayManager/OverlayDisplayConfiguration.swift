@@ -9,14 +9,16 @@
 import Foundation
 
 public struct OverlayDisplayConfiguration {
-    let pinningEdge: Edge
+    let pinningLocation: PinningLocation
     let animationType: AnimationType
+    let additionalInsets: UIEdgeInsets?
 }
 
 public extension OverlayDisplayConfiguration {
-    init(pinToEdge: Edge, animationType: AnimationType) {
-        self.pinningEdge = pinToEdge
+    init(animationType: AnimationType, pinningLocation: PinningLocation, additionalInsets: UIEdgeInsets? = nil) {
+        self.pinningLocation = pinningLocation
         self.animationType = animationType
+        self.additionalInsets = additionalInsets
     }
 }
 

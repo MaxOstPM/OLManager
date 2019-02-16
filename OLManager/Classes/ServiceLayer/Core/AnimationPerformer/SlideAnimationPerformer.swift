@@ -22,8 +22,8 @@ final class SlideAnimationPerformer: BaseAnimationPerformer {
         setupOverlayFrame()
         let originFrame = overlay.frame
         
-        switch displayConfig.pinningEdge {
-        case .top:
+        switch displayConfig.pinningLocation.verticalEdge {
+        case .top, .middle:
             overlay.frame.origin.y = availableRegion.origin.y - overlay.frame.height
         case .bottom:
             overlay.frame.origin.y = availableRegion.maxY + overlay.frame.height
@@ -40,12 +40,12 @@ final class SlideAnimationPerformer: BaseAnimationPerformer {
             removeOverlayFromSuperview()
             completion?()
         }
-        // TODO: наверное стоит перенести этот код в другое место?
+        
         var finalYCoord: CGFloat
-        switch displayConfig.pinningEdge {
-            case .top:
+        switch displayConfig.pinningLocation.verticalEdge {
+        case .top, .middle:
             finalYCoord = availableRegion.origin.y - overlay.frame.height
-            case .bottom:
+        case .bottom:
             finalYCoord = availableRegion.maxY + overlay.frame.height
         }
         

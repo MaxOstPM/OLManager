@@ -8,18 +8,12 @@
 
 import UIKit
 
-public enum Edge {
-    case top
-    case bottom
-    // TODO: add left and right edges
-}
-
-// MARK: OverlayManager
+// MARK: - OverlayManager
 public protocol ViewControllerObservable {
     func viewControllerBecomeActive(_ viewController: UIViewController)
 }
 
-// TODO: Rename
+// TODO: - Rename
 protocol OverlayManageableConnection: class {
     func removeOverlay(_ overlay: UIView, animated: Bool)
     func hideOverlay(_ overlay: UIView, animated: Bool)
