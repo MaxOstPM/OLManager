@@ -15,11 +15,13 @@ public protocol OverlayManager {
     
     associatedtype OverlayFactoryImp: OverlayFactory
     
+    func addOverlayWindowWithFrame(_ frame: CGRect, level: UIWindow.Level)
+    
     func displayOverlay(_ overlay: OverlayFactoryImp.OverlayType, configuration: OverlayDisplayConfiguration) -> OverlayManageable?
     
-    func addOverlayWindowWithFrame(_ frame: CGRect, level: UIWindow.Level)
-
     func hideOverlays(animated: Bool)
+    
+    func displayExistedOverlays()
     
     init(factory: OverlayFactoryImp)
 }
@@ -101,6 +103,13 @@ public extension OverlayManagerOf {
             container.animator.removeOverlay(animated: animated, completion: nil)
         }
     }
+    
+    func displayExistedOverlays() {
+        for container in currentOverlayContainers {
+            removeZombiesOverlays()
+            container.animator.displayOverlayAfterAppearence()
+        }
+    }
 }
 
 // MARK: - PrivateHelpers
@@ -115,11 +124,9 @@ private extension OverlayManagerOf {
         })
     }
     
-    func displayExistedOverlays() {
-        for container in currentOverlayContainers {
-            removeZombiesOverlays()
-            container.animator.displayOverlayAfterAppearence()
-        }
+    private func getContainerFor(_ overlay: UIView) -> OverlayContainer? {
+        let neededContainerArray = currentOverlayContainers.filter({ return $0.overlay == overlay })
+        return neededContainerArray.first
     }
 }
 
@@ -149,11 +156,6 @@ extension OverlayManagerOf: OverlayManageableConnection {
             return
         }
         container.animator.displayOverlay()
-    }
-    
-    private func getContainerFor(_ overlay: UIView) -> OverlayContainer? {
-        let neededContainerArray = currentOverlayContainers.filter({ return $0.overlay == overlay })
-        return neededContainerArray.first
     }
 }
 
