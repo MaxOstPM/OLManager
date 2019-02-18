@@ -11,8 +11,7 @@ import Foundation
 final class StaticAnimationPerformer: BaseAnimationPerformer {
 
     override func displayOverlay() {
-        setupOverlayFrame()
-        addOverlayOnSuperview()
+        displayOverlayWithoutAnimation()
     }
     
     override func removeOverlay(animated: Bool, completion: OptionalCompletion) {

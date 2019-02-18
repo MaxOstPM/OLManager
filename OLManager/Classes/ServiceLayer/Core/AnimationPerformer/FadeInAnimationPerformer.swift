@@ -30,6 +30,7 @@ final class FadeInAnimationPerformer: BaseAnimationPerformer {
     
     override func removeOverlay(animated: Bool, completion: OptionalCompletion) {
         func remove() {
+            overlay.alpha = 1.0
             removeOverlayFromSuperview()
             completion?()
         }

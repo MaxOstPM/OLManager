@@ -13,7 +13,7 @@ typealias OptionalCompletion = (() -> Void)?
 protocol AnimationPerformer {
     init(windowRootViewController: OverlayWindowRootViewController, overlayedViewController: UIViewController, overlay: UIView, displayConfig: OverlayDisplayConfiguration)
     
-    func displayOverlayAfterAppearence()
+    func displayOverlayWithoutAnimation()
     func displayOverlay()
     func removeOverlay(animated: Bool, completion: OptionalCompletion)
 }
@@ -51,7 +51,8 @@ class BaseAnimationPerformer: AnimationPerformer {
         assertionFailure()
     }
     
-    func displayOverlayAfterAppearence() {
+    func displayOverlayWithoutAnimation() {
+        setupOverlayFrame()
         addOverlayOnSuperview()
     }
 }

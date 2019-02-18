@@ -106,8 +106,7 @@ public extension OverlayManagerOf {
     
     func displayExistedOverlays() {
         for container in currentOverlayContainers {
-            removeZombiesOverlays()
-            container.animator.displayOverlayAfterAppearence()
+            container.animator.displayOverlayWithoutAnimation()
         }
     }
 }
@@ -116,12 +115,10 @@ public extension OverlayManagerOf {
 private extension OverlayManagerOf {
 
     func removeZombiesOverlays() {
-        DispatchQueue.global().async(execute: {
-            DispatchQueue.main.async { [weak self] in
-                guard let strongSelf = self else { return }
-                strongSelf.map = strongSelf.map.filter({ return $0.key.item != nil })
-            }
-        })
+        DispatchQueue.main.async { [weak self] in
+            guard let strongSelf = self else { return }
+            strongSelf.map = strongSelf.map.filter({ return $0.key.item != nil })
+        }
     }
     
     private func getContainerFor(_ overlay: UIView) -> OverlayContainer? {
@@ -155,7 +152,11 @@ extension OverlayManagerOf: OverlayManageableConnection {
         guard let container = getContainerFor(overlay) else {
             return
         }
-        container.animator.displayOverlay()
+        if animated {
+            container.animator.displayOverlay()
+        } else {
+            container.animator.displayOverlayWithoutAnimation()
+        }
     }
 }
 
@@ -165,5 +166,6 @@ extension OverlayManagerOf: ViewControllerObservable {
     public func viewControllerBecomeActive(_ viewController: UIViewController) {
         self.currentViewController = viewController
         displayExistedOverlays()
+        removeZombiesOverlays()
     }
 }
