@@ -41,7 +41,7 @@ final class OverlayFrameCalculatorImp: OverlayFrameCalculator {
             
             if let additionalInsets = configuration.additionalInsets {
                 point.x += additionalInsets.left - additionalInsets.right
-                point.y += additionalInsets.bottom - additionalInsets.bottom
+                point.y += additionalInsets.top - additionalInsets.bottom
             }
             
             let overlayFrame = CGRect(x: point.x, y: point.y, width: overlaySize.width, height: overlaySize.height)
