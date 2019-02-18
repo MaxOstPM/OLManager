@@ -24,9 +24,12 @@ extension OverlayWindow {
         
         var convertedPoint: CGPoint
         for overlay in rootVC.overlays {
+            if overlay.isHidden || !overlay.isUserInteractionEnabled || overlay.alpha < 0.01 {
+                return nil
+            }
             convertedPoint = rootVC.view.convert(point, to: overlay)
             if overlay.point(inside: convertedPoint, with: event) {
-                return overlay.hitTest(point, with: event)
+                return overlay.hitTest(convertedPoint, with: event)
             }
         }
         return nil
