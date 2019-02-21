@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0FAB8E879F054AAA0DF4936E5D8816C1 /* Pods-OLManager_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A8FDE6E9C5045D21B8676EF47B4A5C5 /* Pods-OLManager_Tests-dummy.m */; };
 		40AB1D2EBBBEFA0ADE20818C74BC9961 /* OLManager-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EE81D78EB3B480993D51B2EF8292675E /* OLManager-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		500999B7221ED9D300AF7A11 /* PropertyStoring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500999B6221ED9D300AF7A11 /* PropertyStoring.swift */; };
 		64291C1453D0FD3C89968C5B08A6D48A /* OLManager-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D3BB1C309B72280F5CE39626589C1161 /* OLManager-dummy.m */; };
 		8AFC0144AD150F45496CDEFD69C69548 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
 		A16DD64E5B01612A969FF61ABAB1FB58 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
@@ -37,7 +38,6 @@
 		50099998221EC8D500AF7A11 /* UIViewController+OverlayInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+OverlayInsets.swift"; sourceTree = "<group>"; };
 		50099999221EC8D500AF7A11 /* UIViewController+AvailableRegion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+AvailableRegion.swift"; sourceTree = "<group>"; };
 		5009999A221EC8D500AF7A11 /* UIViewController+AnimatorsMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+AnimatorsMap.swift"; sourceTree = "<group>"; };
-		5009999B221EC8D500AF7A11 /* PropertyStoring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyStoring.swift; sourceTree = "<group>"; };
 		5009999E221EC8D500AF7A11 /* AnimationPerformerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationPerformerFactory.swift; sourceTree = "<group>"; };
 		500999A0221EC8D500AF7A11 /* SlideAnimationPerformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideAnimationPerformer.swift; sourceTree = "<group>"; };
 		500999A1221EC8D500AF7A11 /* FadeInAnimationPerformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadeInAnimationPerformer.swift; sourceTree = "<group>"; };
@@ -55,6 +55,7 @@
 		500999B1221EC8D500AF7A11 /* OverlayWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayWindow.swift; sourceTree = "<group>"; };
 		500999B2221EC8D500AF7A11 /* PinningLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinningLocation.swift; sourceTree = "<group>"; };
 		500999B3221EC8D500AF7A11 /* OverlayWindowRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayWindowRootViewController.swift; sourceTree = "<group>"; };
+		500999B6221ED9D300AF7A11 /* PropertyStoring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyStoring.swift; sourceTree = "<group>"; };
 		528C790E648F4391BBABC1E2FE7E39B2 /* OLManager-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OLManager-prefix.pch"; sourceTree = "<group>"; };
 		6470173E0A7B8627AE5DBCCA43C5C6DA /* OLManager.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = OLManager.modulemap; sourceTree = "<group>"; };
 		7314FBF7E5A643B86DE0707476AE46B3 /* Pods-OLManager_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OLManager_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -148,7 +149,7 @@
 				50099998221EC8D500AF7A11 /* UIViewController+OverlayInsets.swift */,
 				50099999221EC8D500AF7A11 /* UIViewController+AvailableRegion.swift */,
 				5009999A221EC8D500AF7A11 /* UIViewController+AnimatorsMap.swift */,
-				5009999B221EC8D500AF7A11 /* PropertyStoring.swift */,
+				500999B6221ED9D300AF7A11 /* PropertyStoring.swift */,
 			);
 			name = Extensions;
 			path = OLManager/ServiceLayer/Extensions;
@@ -168,8 +169,8 @@
 			isa = PBXGroup;
 			children = (
 				5009999E221EC8D500AF7A11 /* AnimationPerformerFactory.swift */,
-				5009999F221EC8D500AF7A11 /* Animators */,
 				500999A4221EC8D500AF7A11 /* AnimationPerformerContract.swift */,
+				5009999F221EC8D500AF7A11 /* Animators */,
 			);
 			path = AnimationPerformer;
 			sourceTree = "<group>";
@@ -343,6 +344,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
 				LastUpgradeCheck = 0930;
+				TargetAttributes = {
+					6158448B9D72A92734754657D7822256 = {
+						LastSwiftMigration = 1010;
+					};
+				};
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -393,6 +399,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				64291C1453D0FD3C89968C5B08A6D48A /* OLManager-dummy.m in Sources */,
+				500999B7221ED9D300AF7A11 /* PropertyStoring.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,6 +452,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2BD57068464F9C624CCADC85E95ECC24 /* OLManager.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -575,6 +583,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2BD57068464F9C624CCADC85E95ECC24 /* OLManager.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -595,6 +604,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
