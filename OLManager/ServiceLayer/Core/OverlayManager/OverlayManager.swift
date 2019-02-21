@@ -75,7 +75,7 @@ public extension OverlayManagerOf {
         let overlayView = overlaysFactory.makeOverlayWith(type: overlay)
         let animator = animationPerformerFactory.makeAnimationPerformerFor(overlayView, with: configuration.animationType, windowRootViewController: rootVC, overlayedViewController: currentVC, displayConfig: configuration)
         
-        let collection = getCollectionForLevel(overlay.overlayLevel)
+        let collection = getCollectionForLevel(configuration.overlayLevel)
         collection.pointee.append(animator)
         
         animator.displayOverlay()

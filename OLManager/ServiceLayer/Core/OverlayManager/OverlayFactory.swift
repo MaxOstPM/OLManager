@@ -9,7 +9,7 @@
 import UIKit
 
 public protocol OverlayFactory {
-    associatedtype OverlayType: OverlayLevelHolder
+    associatedtype OverlayType
     
     func makeOverlayWith(type: OverlayType) -> UIView
 }
