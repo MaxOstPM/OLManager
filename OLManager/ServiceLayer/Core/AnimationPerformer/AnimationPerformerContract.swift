@@ -8,7 +8,7 @@
 
 import UIKit
 
-typealias OptionalCompletion = (() -> Void)?
+public typealias OptionalCompletion = (() -> Void)?
 
 protocol AnimationPerformer {
     init(windowRootViewController: OverlayWindowRootViewController, overlayedViewController: UIViewController, overlay: UIView, displayConfig: OverlayDisplayConfiguration)

@@ -7,7 +7,7 @@
 
 import Foundation
 
-class BaseAnimationPerformer: AnimationPerformer {
+public class BaseAnimationPerformer: AnimationPerformer {
     
     private var overlayFrameCalculator: OverlayFrameCalculator
     private var windowRootViewController: OverlayWindowRootViewController
@@ -16,10 +16,10 @@ class BaseAnimationPerformer: AnimationPerformer {
     var displayConfig: OverlayDisplayConfiguration
     
     var availableRegion: CGRect
-    var incomeAnimationDuration: Double {
+    open var incomeAnimationDuration: Double {
         return 0.0
     }
-    var outcomeAnimationDuration: Double {
+    open var outcomeAnimationDuration: Double {
         return 0.0
     }
     
@@ -36,11 +36,11 @@ class BaseAnimationPerformer: AnimationPerformer {
     }
     
     // MARK: BaseAnimationPerformer
-    func displayOverlay() {
+    open func displayOverlay() {
         assertionFailure()
     }
     
-    func removeOverlay(animated: Bool, completion: OptionalCompletion) {
+    open func removeOverlay(animated: Bool, completion: OptionalCompletion) {
         assertionFailure()
     }
     

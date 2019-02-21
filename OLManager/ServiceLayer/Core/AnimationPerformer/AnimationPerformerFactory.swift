@@ -24,6 +24,8 @@ final class AnimationPerformerFactoryImp: AnimationPerformerFactory {
             PerformerType = SlideAnimationPerformer.self
         case .none:
             PerformerType = StaticAnimationPerformer.self
+        case .custom(let factory):
+            return factory
         }
         
         return PerformerType.init(windowRootViewController: windowRootViewController, overlayedViewController: overlayedViewController, overlay: overlay, displayConfig: displayConfig)
