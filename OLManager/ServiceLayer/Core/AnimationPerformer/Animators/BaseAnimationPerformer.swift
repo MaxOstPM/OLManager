@@ -1,25 +1,14 @@
 //
 //  BaseAnimationPerformer.swift
-//  ViewsManager
+//  OLManager
 //
-//  Created by Максим Остапчук on 2/5/19.
-//  Copyright © 2019 Максим Остапчук. All rights reserved.
+//  Created by Максим Остапчук on 2/21/19.
 //
 
-import UIKit
-
-typealias OptionalCompletion = (() -> Void)?
-
-protocol AnimationPerformer {
-    init(windowRootViewController: OverlayWindowRootViewController, overlayedViewController: UIViewController, overlay: UIView, displayConfig: OverlayDisplayConfiguration)
-    
-    func displayOverlayWithoutAnimation()
-    func displayOverlay()
-    func removeOverlay(animated: Bool, completion: OptionalCompletion)
-}
+import Foundation
 
 class BaseAnimationPerformer: AnimationPerformer {
-
+    
     private var overlayFrameCalculator: OverlayFrameCalculator
     private var windowRootViewController: OverlayWindowRootViewController
     
@@ -40,6 +29,10 @@ class BaseAnimationPerformer: AnimationPerformer {
         self.overlayFrameCalculator = OverlayFrameCalculatorImp()
         self.overlay = overlay
         self.displayConfig = displayConfig
+    }
+    
+    deinit {
+        print("Animator deinit")
     }
     
     // MARK: BaseAnimationPerformer
@@ -65,10 +58,10 @@ extension BaseAnimationPerformer {
     }
     
     func addOverlayOnSuperview() {
-        windowRootViewController.addNewOverlay(overlay)
+        windowRootViewController.addNewOverlayWith(animationPerformer: self)
     }
     
     func removeOverlayFromSuperview() {
-        windowRootViewController.removeOverlay(overlay)
+        windowRootViewController.removeOverlayWith(animationPerformer: self)
     }
 }

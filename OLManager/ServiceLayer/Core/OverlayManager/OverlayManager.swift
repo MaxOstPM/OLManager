@@ -8,9 +8,6 @@
 
 import UIKit
 
-private typealias BaseVCBox = WeakBox<UIViewController>
-private typealias OverlayContainer = (overlay: UIView, animator: AnimationPerformer)
-
 public protocol OverlayManager {
     
     associatedtype OverlayFactoryImp: OverlayFactory
@@ -19,9 +16,9 @@ public protocol OverlayManager {
     
     func displayOverlay(_ overlay: OverlayFactoryImp.OverlayType, configuration: OverlayDisplayConfiguration) -> OverlayManageable?
     
-    func hideOverlays(animated: Bool)
+    func hideOverlays(level: OverlayLevel, animated: Bool)
     
-    func displayExistedOverlays()
+    func displayExistedOverlays(level: OverlayLevel)
     
     init(factory: OverlayFactoryImp)
 }
@@ -31,34 +28,25 @@ public final class OverlayManagerOf<OverlayFactoryImp: OverlayFactory>: OverlayM
     private let animationPerformerFactory: AnimationPerformerFactory
     private var overlaysFactory: OverlayFactoryImp
     
-    private var map: [BaseVCBox: [OverlayContainer]]
+    private var globalAnimatorsMap: [AnimationPerformer]
     
     private var overlayWindow: OverlayWindow?
     private var currentViewController: UIViewController?
-    private var currentViewControllerBox: BaseVCBox? {
-        if let viewController = currentViewController {
-            return WeakBox.init(viewController)
-        } else {
-            return nil
-        }
-    }
-    private var currentOverlayContainers: [OverlayContainer] {
+    private var currentAnimatorContainer: [AnimationPerformer] {
         get {
-            if let box = currentViewControllerBox, let currentContainers = map[box] {
-                return currentContainers
+            if let box = currentViewController?.animationPerformers {
+                return box
             }
             return []
         }
         set {
-            if let box = currentViewControllerBox {
-                map.updateValue(newValue, forKey: box)
-            }
+            currentViewController?.animationPerformers = newValue
         }
     }
     
     public init(factory: OverlayFactoryImp) {
         animationPerformerFactory = AnimationPerformerFactoryImp()
-        map = [BaseVCBox: [OverlayContainer]]()
+        globalAnimatorsMap = [AnimationPerformer]()
         overlaysFactory = factory
     }
 }
@@ -86,44 +74,47 @@ public extension OverlayManagerOf {
         
         let overlayView = overlaysFactory.makeOverlayWith(type: overlay)
         let animator = animationPerformerFactory.makeAnimationPerformerFor(overlayView, with: configuration.animationType, windowRootViewController: rootVC, overlayedViewController: currentVC, displayConfig: configuration)
-        let container = OverlayContainer(overlay: overlayView, animator: animator)
         
-        var existedOverlays = currentOverlayContainers
-        existedOverlays.append(container)
-        currentOverlayContainers = existedOverlays
+        let collection = getCollectionForLevel(overlay.overlayLevel)
+        collection.pointee.append(animator)
         
-        removeZombiesOverlays()
         animator.displayOverlay()
         
         return OverlayManageableImp(overlay: overlayView, overlayManageble: self)
     }
     
-    func hideOverlays(animated: Bool) {
-        for container in currentOverlayContainers {
-            container.animator.removeOverlay(animated: animated, completion: nil)
+    func hideOverlays(level: OverlayLevel, animated: Bool) {
+        let collection = getCollectionForLevel(level)
+        
+        for animator in collection.pointee {
+            animator.removeOverlay(animated: animated, completion: nil)
         }
     }
     
-    func displayExistedOverlays() {
-        for container in currentOverlayContainers {
-            container.animator.displayOverlayWithoutAnimation()
+    func displayExistedOverlays(level: OverlayLevel) {
+        let collection = getCollectionForLevel(level)
+        
+        for animator in collection.pointee {
+            animator.displayOverlayWithoutAnimation()
         }
     }
 }
 
 // MARK: - PrivateHelpers
 private extension OverlayManagerOf {
-
-    func removeZombiesOverlays() {
-        DispatchQueue.main.async { [weak self] in
-            guard let strongSelf = self else { return }
-            strongSelf.map = strongSelf.map.filter({ return $0.key.item != nil })
-        }
+    
+    private func getAnimatorFor(_ overlay: UIView) -> AnimationPerformer? {
+        let neededContainerArray = currentAnimatorContainer.filter({ return $0.overlay == overlay })
+        return neededContainerArray.first
     }
     
-    private func getContainerFor(_ overlay: UIView) -> OverlayContainer? {
-        let neededContainerArray = currentOverlayContainers.filter({ return $0.overlay == overlay })
-        return neededContainerArray.first
+    private func getCollectionForLevel(_ level: OverlayLevel) -> UnsafeMutablePointer<[AnimationPerformer]> {
+        switch level {
+        case .local:
+            return withUnsafeMutablePointer(to: &currentAnimatorContainer, { $0 })
+        case .global:
+            return withUnsafeMutablePointer(to: &globalAnimatorsMap, { $0 })
+        }
     }
 }
 
@@ -131,31 +122,32 @@ private extension OverlayManagerOf {
 extension OverlayManagerOf: OverlayManageableConnection {
 
     internal func removeOverlay(_ overlay: UIView, animated: Bool) {
-        guard let container = getContainerFor(overlay) else {
+        guard let animator = getAnimatorFor(overlay) else {
             return
         }
-        container.animator.removeOverlay(animated: animated) { [weak self] in
+        animator.removeOverlay(animated: animated) { [weak self] in
             guard let strongSelf = self else { return }
-            strongSelf.currentOverlayContainers = strongSelf.currentOverlayContainers.filter({ return $0.overlay != overlay })
-            strongSelf.removeZombiesOverlays()
+            // TODO: need to do it in another way
+            strongSelf.globalAnimatorsMap = strongSelf.globalAnimatorsMap.filter({ return $0.overlay != overlay })
+            strongSelf.currentAnimatorContainer = strongSelf.currentAnimatorContainer.filter({ return $0.overlay != overlay })
         }
     }
     
     internal func hideOverlay(_ overlay: UIView, animated: Bool) {
-        guard let container = getContainerFor(overlay) else {
+        guard let animator = getAnimatorFor(overlay) else {
             return
         }
-        container.animator.removeOverlay(animated: animated, completion: nil)
+        animator.removeOverlay(animated: animated, completion: nil)
     }
     
     internal func showOverlay(_ overlay: UIView, animated: Bool) {
-        guard let container = getContainerFor(overlay) else {
+        guard let animator = getAnimatorFor(overlay) else {
             return
         }
         if animated {
-            container.animator.displayOverlay()
+            animator.displayOverlay()
         } else {
-            container.animator.displayOverlayWithoutAnimation()
+            animator.displayOverlayWithoutAnimation()
         }
     }
 }
@@ -165,7 +157,6 @@ extension OverlayManagerOf: ViewControllerObservable {
     
     public func viewControllerBecomeActive(_ viewController: UIViewController) {
         self.currentViewController = viewController
-        displayExistedOverlays()
-        removeZombiesOverlays()
+        displayExistedOverlays(level: .local)
     }
 }

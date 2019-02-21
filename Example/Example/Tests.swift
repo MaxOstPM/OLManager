@@ -1,8 +1,17 @@
 import OLManager
 
-enum Overlays {
+enum Overlays: OverlayLevelHolder {
     case provideStatistic
     case paidSocialFailure
+    
+    var overlayLevel: OverlayLevel {
+        switch self {
+        case .provideStatistic:
+            return .local
+        case .paidSocialFailure:
+            return .local
+        }
+    }
 }
 
 final class OverlayFactoryImp: OverlayFactory {

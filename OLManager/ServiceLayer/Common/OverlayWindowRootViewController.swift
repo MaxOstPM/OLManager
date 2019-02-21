@@ -9,8 +9,6 @@
 import UIKit
 
 class OverlayWindowRootViewController: UIViewController {
-    
-    private (set) var overlays: [UIView] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,13 +19,13 @@ class OverlayWindowRootViewController: UIViewController {
 
 extension OverlayWindowRootViewController {
     
-    func addNewOverlay(_ overlay: UIView) {
-        overlays.append(overlay)
-        view.addSubview(overlay)
+    func addNewOverlayWith(animationPerformer: AnimationPerformer) {
+        animationPerformers.append(animationPerformer)
+        view.addSubview(animationPerformer.overlay)
     }
     
-    func removeOverlay(_ overlay: UIView) {
-        overlay.removeFromSuperview()
-        overlays = overlays.filter({ return $0 != overlay })
+    func removeOverlayWith(animationPerformer: AnimationPerformer) {
+        animationPerformer.overlay.removeFromSuperview()
+        animationPerformers = animationPerformers.filter({ return $0.overlay != animationPerformer.overlay })
     }
 }

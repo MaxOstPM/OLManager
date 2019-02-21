@@ -22,8 +22,11 @@ extension OverlayWindow {
             return nil
         }
         
+        let performers = rootVC.animationPerformers
         var convertedPoint: CGPoint
-        for overlay in rootVC.overlays {
+        
+        for performer in performers {
+            let overlay = performer.overlay
             if overlay.isHidden || !overlay.isUserInteractionEnabled || overlay.alpha < 0.01 {
                 return nil
             }
