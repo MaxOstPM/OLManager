@@ -12,15 +12,13 @@ public struct OverlayDisplayConfiguration {
     let pinningLocation: PinningLocation
     let animationType: AnimationType
     let additionalInsets: UIEdgeInsets?
-    let overlayLevel: OverlayLevel
 }
 
 public extension OverlayDisplayConfiguration {
-    init(animationType: AnimationType, pinningLocation: PinningLocation, overlayLevel: OverlayLevel, additionalInsets: UIEdgeInsets? = nil) {
+    init(animationType: AnimationType, pinningLocation: PinningLocation, additionalInsets: UIEdgeInsets? = nil) {
         self.pinningLocation = pinningLocation
         self.animationType = animationType
         self.additionalInsets = additionalInsets
-        self.overlayLevel = overlayLevel
     }
 }
 
@@ -33,4 +31,8 @@ public enum AnimationType {
 public enum OverlayLevel {
     case local
     case global
+}
+
+public protocol OverlayLevelHolder {
+    var level: OverlayLevel { get }
 }

@@ -5,9 +5,9 @@
 //  Created by Максим Остапчук on 2/21/19.
 //
 
-import Foundation
+import UIKit
 
-extension UIViewController: PropertyStoring {
+extension UIViewController {
     typealias T = [AnimationPerformer]
     
     private struct AssociatedKeys {
@@ -16,10 +16,11 @@ extension UIViewController: PropertyStoring {
     
     var animationPerformers: [AnimationPerformer] {
         get {
-            return getAssociatedObject(AssociatedKeys.performersKey, defaultValue: [])
+            let collection = objc_getAssociatedObject(self, &AssociatedKeys.performersKey) as? [AnimationPerformer]
+            return collection ?? []
         }
         set (performers) {
-            objc_setAssociatedObject(self, &AssociatedKeys.performersKey, performers, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            objc_setAssociatedObject(self, &AssociatedKeys.performersKey, performers, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
     }
 }

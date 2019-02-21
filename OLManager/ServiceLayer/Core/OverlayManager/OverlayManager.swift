@@ -75,8 +75,12 @@ public extension OverlayManagerOf {
         let overlayView = overlaysFactory.makeOverlayWith(type: overlay)
         let animator = animationPerformerFactory.makeAnimationPerformerFor(overlayView, with: configuration.animationType, windowRootViewController: rootVC, overlayedViewController: currentVC, displayConfig: configuration)
         
-        let collection = getCollectionForLevel(configuration.overlayLevel)
-        collection.pointee.append(animator)
+        switch overlay.level {
+        case .local:
+            currentAnimatorContainer.append(animator)
+        case .global:
+            globalAnimatorsMap.append(animator)
+        }
         
         animator.displayOverlay()
         
@@ -86,7 +90,7 @@ public extension OverlayManagerOf {
     func hideOverlays(level: OverlayLevel, animated: Bool) {
         let collection = getCollectionForLevel(level)
         
-        for animator in collection.pointee {
+        for animator in collection {
             animator.removeOverlay(animated: animated, completion: nil)
         }
     }
@@ -94,7 +98,7 @@ public extension OverlayManagerOf {
     func displayExistedOverlays(level: OverlayLevel) {
         let collection = getCollectionForLevel(level)
         
-        for animator in collection.pointee {
+        for animator in collection {
             animator.displayOverlayWithoutAnimation()
         }
     }
@@ -108,12 +112,12 @@ private extension OverlayManagerOf {
         return neededContainerArray.first
     }
     
-    private func getCollectionForLevel(_ level: OverlayLevel) -> UnsafeMutablePointer<[AnimationPerformer]> {
+    private func getCollectionForLevel(_ level: OverlayLevel) -> [AnimationPerformer] {
         switch level {
         case .local:
-            return withUnsafeMutablePointer(to: &currentAnimatorContainer, { $0 })
+            return currentAnimatorContainer
         case .global:
-            return withUnsafeMutablePointer(to: &globalAnimatorsMap, { $0 })
+            return globalAnimatorsMap
         }
     }
 }
