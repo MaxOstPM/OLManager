@@ -23,6 +23,10 @@ public final class OverlayManageableImp: OverlayManageable {
         self.overlay = overlay
         self.overlayManageble = overlayManageble
     }
+    
+    deinit {
+        removeOverlay(animated: false)
+    }
 }
 
 // MARK: - OverlayManageable
