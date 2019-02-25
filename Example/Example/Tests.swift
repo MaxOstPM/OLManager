@@ -4,7 +4,7 @@ enum Overlays: OverlayLevelHolder {
     case provideStatistic
     case paidSocialFailure
     
-    var overlayLevel: OverlayLevel {
+    var level: OverlayLevel {
         switch self {
         case .provideStatistic:
             return .local

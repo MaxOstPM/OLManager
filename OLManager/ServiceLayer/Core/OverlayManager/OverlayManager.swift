@@ -28,7 +28,7 @@ public final class OverlayManagerOf<OverlayFactoryImp: OverlayFactory>: OverlayM
     private let animationPerformerFactory: AnimationPerformerFactory
     private var overlaysFactory: OverlayFactoryImp
     
-    private var globalAnimatorsMap: [AnimationPerformer]
+    private var globalAnimatorsContainer: [AnimationPerformer]
     
     private var overlayWindow: OverlayWindow?
     private var currentViewController: UIViewController?
@@ -46,7 +46,7 @@ public final class OverlayManagerOf<OverlayFactoryImp: OverlayFactory>: OverlayM
     
     public init(factory: OverlayFactoryImp) {
         animationPerformerFactory = AnimationPerformerFactoryImp()
-        globalAnimatorsMap = [AnimationPerformer]()
+        globalAnimatorsContainer = [AnimationPerformer]()
         overlaysFactory = factory
     }
 }
@@ -79,7 +79,7 @@ public extension OverlayManagerOf {
         case .local:
             currentAnimatorContainer.append(animator)
         case .global:
-            globalAnimatorsMap.append(animator)
+            globalAnimatorsContainer.append(animator)
         }
         
         animator.displayOverlay()
@@ -117,7 +117,7 @@ private extension OverlayManagerOf {
         case .local:
             return currentAnimatorContainer
         case .global:
-            return globalAnimatorsMap
+            return globalAnimatorsContainer
         }
     }
 }
@@ -132,7 +132,7 @@ extension OverlayManagerOf: OverlayManageableConnection {
         animator.removeOverlay(animated: animated) { [weak self] in
             guard let strongSelf = self else { return }
             // TODO: need to do it in another way
-            strongSelf.globalAnimatorsMap = strongSelf.globalAnimatorsMap.filter({ return $0.overlay != overlay })
+            strongSelf.globalAnimatorsContainer = strongSelf.globalAnimatorsContainer.filter({ return $0.overlay != overlay })
             strongSelf.currentAnimatorContainer = strongSelf.currentAnimatorContainer.filter({ return $0.overlay != overlay })
         }
     }
