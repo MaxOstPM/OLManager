@@ -31,7 +31,7 @@ public final class OverlayManagerOf<OverlayFactoryImp: OverlayFactory>: OverlayM
     private var globalAnimatorsContainer: [AnimationPerformer]
     
     private var overlayWindow: OverlayWindow?
-    private var currentViewController: UIViewController?
+    private weak var currentViewController: UIViewController?
     private var currentAnimatorContainer: [AnimationPerformer] {
         get {
             if let box = currentViewController?.animationPerformers {
