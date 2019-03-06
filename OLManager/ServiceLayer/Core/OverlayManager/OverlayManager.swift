@@ -68,7 +68,6 @@ public extension OverlayManagerOf {
         guard
             let rootVC = overlayWindow?.overlayViewController,
             let currentVC = currentViewController else {
-                assertionFailure()
                 return nil
         }
         

@@ -20,8 +20,12 @@ class OverlayWindowRootViewController: UIViewController {
 extension OverlayWindowRootViewController {
     
     func addNewOverlayWith(animationPerformer: AnimationPerformer) {
-        animationPerformers.append(animationPerformer)
-        view.addSubview(animationPerformer.overlay)
+        if !animationPerformers.contains(where: { return $0.overlay == animationPerformer.overlay }) {
+            animationPerformers.append(animationPerformer)
+        }
+        if animationPerformer.overlay.superview == nil {
+            view.addSubview(animationPerformer.overlay)
+        }
     }
     
     func removeOverlayWith(animationPerformer: AnimationPerformer) {
