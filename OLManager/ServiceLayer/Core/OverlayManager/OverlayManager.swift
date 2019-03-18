@@ -16,8 +16,6 @@ public protocol OverlayManager {
     
     func displayOverlay(_ overlay: OverlayFactoryImp.OverlayType, configuration: OverlayDisplayConfiguration) -> OverlayManageable?
     
-    func hideOverlays(level: OverlayLevel, animated: Bool)
-    
     func displayExistedOverlays(level: OverlayLevel)
     
     init(factory: OverlayFactoryImp)
@@ -84,14 +82,6 @@ public extension OverlayManagerOf {
         animator.displayOverlay()
         
         return OverlayManageableImp(overlay: overlayView, overlayManageble: self)
-    }
-    
-    func hideOverlays(level: OverlayLevel, animated: Bool) {
-        let collection = getCollectionForLevel(level)
-        
-        for animator in collection {
-            animator.removeOverlay(animated: animated, completion: nil)
-        }
     }
     
     func displayExistedOverlays(level: OverlayLevel) {

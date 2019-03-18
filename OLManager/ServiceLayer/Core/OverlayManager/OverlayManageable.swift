@@ -14,7 +14,7 @@ public protocol OverlayManageable {
     func showOverlay(animated: Bool)
 }
 
-public final class OverlayManageableImp: OverlayManageable {
+internal final class OverlayManageableImp: OverlayManageable {
     
     private weak var overlay: UIView?
     private weak var overlayManageble: OverlayManageableConnection?
@@ -30,7 +30,7 @@ public final class OverlayManageableImp: OverlayManageable {
 }
 
 // MARK: - OverlayManageable
-public extension OverlayManageableImp {
+extension OverlayManageableImp {
     
     func removeOverlay(animated: Bool) {
         defer {
