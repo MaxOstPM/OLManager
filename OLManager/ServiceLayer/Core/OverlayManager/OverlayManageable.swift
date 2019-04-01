@@ -12,12 +12,18 @@ public protocol OverlayManageable {
     func removeOverlay(animated: Bool)
     func hideOverlay(animated: Bool)
     func showOverlay(animated: Bool)
+    
+    var isValid: Bool { get }
 }
 
 internal final class OverlayManageableImp: OverlayManageable {
     
     private weak var overlay: UIView?
     private weak var overlayManageble: OverlayManageableConnection?
+    
+    var isValid: Bool {
+        return overlayManageble != nil
+    }
     
     init(overlay: UIView? = nil, overlayManageble: OverlayManageableConnection? = nil) {
         self.overlay = overlay
@@ -36,22 +42,28 @@ extension OverlayManageableImp {
         defer {
             overlayManageble = nil
         }
-        guard let unwrappedOverlay = overlay else {
-            return
+        guard
+            let unwrappedOverlay = overlay,
+            overlayManageble != nil else {
+                return
         }
         overlayManageble?.removeOverlay(unwrappedOverlay, animated: animated)
     }
     
     func hideOverlay(animated: Bool) {
-        guard let unwrappedOverlay = overlay else {
-            return
+        guard
+            let unwrappedOverlay = overlay,
+            overlayManageble != nil else {
+                return
         }
         overlayManageble?.hideOverlay(unwrappedOverlay, animated: animated)
     }
     
     func showOverlay(animated: Bool) {
-        guard let unwrappedOverlay = overlay else {
-            return
+        guard
+            let unwrappedOverlay = overlay,
+            overlayManageble != nil else {
+                return
         }
         overlayManageble?.showOverlay(unwrappedOverlay, animated: animated)
     }

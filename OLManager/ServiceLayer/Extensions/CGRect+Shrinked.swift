@@ -10,7 +10,6 @@ import UIKit
 
 extension CGRect {
     
-    
     func shrinked(with insets: UIEdgeInsets) -> CGRect {
         let y = insets.top
         let x = insets.left
