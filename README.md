@@ -19,6 +19,46 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod 'OLManager'
 ```
+## Implementation Examples
+
+```swift
+import OLManager
+
+enum YourCustomOverlays: OverlayLevelHolder { 
+    case successOverlay
+    case failurOverlay
+
+    var level: YourCustomOverlays {
+        switch self {
+            case .successOverlay:
+            return .global
+            case .failurOverlay:
+            return .local
+        }
+    }
+}
+
+final class OverlayFactoryImp: OverlayFactory {
+
+    func makeOverlayWith(type: YourCustomOverlays) -> UIView {
+        switch type {
+            ...
+        }
+    }
+}
+
+final class OverlayManagerProvider {
+
+    static let provider = OverlayManagerProvider()
+
+    var overlayManager: OverlayManagerOf<OverlayFactoryImp>
+
+    init() {
+        let factory = OverlayFactoryImp()
+        overlayManager = OverlayManagerOf<OverlayFactoryImp>(factory: factory)
+    }
+}
+```
 
 ## Author
 
