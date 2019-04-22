@@ -9,13 +9,17 @@ import Foundation
 
 public class BaseAnimationPerformer: AnimationPerformer {
     
-    private var overlayFrameCalculator: OverlayFrameCalculator
-    private var windowRootViewController: OverlayWindowRootViewController
+    private let overlayFrameCalculator: OverlayFrameCalculator
+    private let windowRootViewControllerConnector: OverlayWindowRootViewControllerConnector
+    private let level: OverlayLevel
     
-    var overlay: UIView
-    var displayConfig: OverlayDisplayConfiguration
+    let overlay: UIView
+    let displayConfig: OverlayDisplayConfiguration
     
-    var availableRegion: CGRect
+    var availableRegion: CGRect {
+        return windowRootViewControllerConnector.getAvailableRegionFor(overlayLevel: level)
+    }
+    
     open var incomeAnimationDuration: Double {
         return 0.0
     }
@@ -23,12 +27,15 @@ public class BaseAnimationPerformer: AnimationPerformer {
         return 0.0
     }
     
-    required init(windowRootViewController: OverlayWindowRootViewController, overlayedViewController: UIViewController, overlay: UIView, displayConfig: OverlayDisplayConfiguration) {
-        self.windowRootViewController = windowRootViewController
-        self.availableRegion = overlayedViewController.availableRegion
+    required init(windowRootViewControllerConnector: OverlayWindowRootViewControllerConnector,
+                  overlay: UIView,
+                  level: OverlayLevel,
+                  displayConfig: OverlayDisplayConfiguration) {
+        self.windowRootViewControllerConnector = windowRootViewControllerConnector
         self.overlayFrameCalculator = OverlayFrameCalculatorImp()
         self.overlay = overlay
         self.displayConfig = displayConfig
+        self.level = level
     }
     
     deinit {
@@ -54,14 +61,15 @@ public class BaseAnimationPerformer: AnimationPerformer {
 extension BaseAnimationPerformer {
     
     func setupOverlayFrame() {
+        let availableRegion = windowRootViewControllerConnector.getAvailableRegionFor(overlayLevel: level)
         overlay.frame = overlayFrameCalculator.makeFrameFor(overlay: overlay, inside: availableRegion, with: displayConfig)
     }
     
     func addOverlayOnSuperview() {
-        windowRootViewController.addNewOverlayWith(animationPerformer: self)
+        windowRootViewControllerConnector.addNewOverlayWith(animationPerformer: self)
     }
     
     func removeOverlayFromSuperview() {
-        windowRootViewController.removeOverlayWith(animationPerformer: self)
+        windowRootViewControllerConnector.removeOverlayWith(animationPerformer: self)
     }
 }

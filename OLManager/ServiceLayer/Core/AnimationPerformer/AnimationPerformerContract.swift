@@ -11,7 +11,10 @@ import UIKit
 public typealias OptionalCompletion = (() -> Void)?
 
 protocol AnimationPerformer {
-    init(windowRootViewController: OverlayWindowRootViewController, overlayedViewController: UIViewController, overlay: UIView, displayConfig: OverlayDisplayConfiguration)
+    init(windowRootViewControllerConnector: OverlayWindowRootViewControllerConnector,
+         overlay: UIView,
+         level: OverlayLevel,
+         displayConfig: OverlayDisplayConfiguration)
     
     func displayOverlayWithoutAnimation()
     func displayOverlay()

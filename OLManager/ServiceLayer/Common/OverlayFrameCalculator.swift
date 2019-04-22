@@ -23,20 +23,20 @@ final class OverlayFrameCalculatorImp: OverlayFrameCalculator {
             
             switch configuration.pinningLocation.horizontalEdge {
             case .left:
-                point.x = availableRegion.minX
+                point.x = 0.0
             case .rigth:
-                point.x = availableRegion.maxX - overlaySize.width
+                point.x = availableRegion.width - overlaySize.width
             case .middle:
-                point.x = availableRegion.midX - overlaySize.width / 2
+                point.x = availableRegion.width / 2 - overlaySize.width / 2
             }
             
             switch configuration.pinningLocation.verticalEdge {
             case .top:
-                point.y = availableRegion.minY
+                point.y = 0.0
             case .bottom:
-                point.y = availableRegion.maxY - overlaySize.height
+                point.y = availableRegion.height - overlaySize.height
             case .middle:
-                point.y = availableRegion.midY - overlaySize.height / 2
+                point.y = availableRegion.height / 2 - overlaySize.height / 2
             }
             
             if let additionalInsets = configuration.additionalInsets {

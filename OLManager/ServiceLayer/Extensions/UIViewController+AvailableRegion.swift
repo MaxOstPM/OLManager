@@ -10,7 +10,14 @@ import UIKit
 
 public extension UIViewController {
     
-    var availableRegion: CGRect {
-        return self.view.frame.shrinked(with: self.overlayInsets)
+    func getAvailableRegionFor(level: OverlayLevel) -> CGRect {
+        switch level {
+            
+        case .local:
+            return self.view.frame.shrinked(with: self.localOverlayInsets)
+            
+        case .global:
+            return self.view.frame.shrinked(with: self.globalOverlayInsets)
+        }
     }
 }

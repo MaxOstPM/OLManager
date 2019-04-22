@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol AbleToChangeOverlayViewControllerFrame {
+    func applyAvailableRegionsWith(viewController: UIViewController)
+}
+
 final class OverlayWindow: UIWindow {
     
     var overlayViewController: OverlayWindowRootViewController? {
@@ -36,5 +40,15 @@ extension OverlayWindow {
             }
         }
         return nil
+    }
+}
+
+extension OverlayWindow: AbleToChangeOverlayViewControllerFrame {
+    
+    func applyAvailableRegionsWith(viewController: UIViewController) {
+        OverlayLevel.allCases.forEach({ level in
+            let region = viewController.getAvailableRegionFor(level: level)
+            overlayViewController?.applyAvailableRegion(region, for: level)
+        })
     }
 }

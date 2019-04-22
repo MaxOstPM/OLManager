@@ -26,10 +26,9 @@ public enum AnimationType {
     case fadeIn
     case slide
     case none
-    case custom(factory: BaseAnimationPerformer)
 }
 
-public enum OverlayLevel {
+public enum OverlayLevel: CaseIterable {
     case local
     case global
 }

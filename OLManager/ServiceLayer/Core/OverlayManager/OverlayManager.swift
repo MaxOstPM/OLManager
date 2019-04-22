@@ -63,14 +63,12 @@ public extension OverlayManagerOf {
     
     func displayOverlay(_ overlay: OverlayFactoryImp.OverlayType, configuration: OverlayDisplayConfiguration) -> OverlayManageable? {
         
-        guard
-            let rootVC = overlayWindow?.overlayViewController,
-            let currentVC = currentViewController else {
-                return nil
+        guard let rootVC = overlayWindow?.overlayViewController else {
+            return nil
         }
         
         let overlayView = overlaysFactory.makeOverlayWith(type: overlay)
-        let animator = animationPerformerFactory.makeAnimationPerformerFor(overlayView, with: configuration.animationType, windowRootViewController: rootVC, overlayedViewController: currentVC, displayConfig: configuration)
+        let animator = animationPerformerFactory.makeAnimationPerformerFor(overlayView, with: overlay.level, windowRootViewController: rootVC, displayConfig: configuration)
         
         switch overlay.level {
         case .local:
@@ -150,6 +148,8 @@ extension OverlayManagerOf: ViewControllerObservable {
     
     public func viewControllerBecomeActive(_ viewController: UIViewController) {
         self.currentViewController = viewController
+        self.overlayWindow?.applyAvailableRegionsWith(viewController: viewController)
+        
         displayExistedOverlays(level: .local)
     }
 }
