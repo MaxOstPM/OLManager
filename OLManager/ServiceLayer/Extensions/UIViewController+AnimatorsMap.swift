@@ -8,7 +8,6 @@
 import UIKit
 
 extension UIViewController {
-    typealias T = [AnimationPerformer]
     
     private struct AssociatedKeys {
         static var performersKey = "UIViewController.AnimationPerformers"

@@ -5,6 +5,8 @@
 [![License](https://img.shields.io/cocoapods/l/OLManager.svg?style=flat)](https://cocoapods.org/pods/OLManager)
 [![Platform](https://img.shields.io/cocoapods/p/OLManager.svg?style=flat)](https://cocoapods.org/pods/OLManager)
 
+Overlay Manager is a lightweight, easy-to-use, written on Swift - helper, which will provide you the convenient API to manage your custom overlays lifecycle with avoiding code repeating.
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
@@ -56,6 +58,18 @@ final class OverlayManagerProvider {
     init() {
         let factory = OverlayFactoryImp()
         overlayManager = OverlayManagerOf<OverlayFactoryImp>(factory: factory)
+    }
+}
+
+final class ViewController: BaseViewController {
+    let overlayManager = OverlayManagerProvider.provider.overlayManager
+    var overlayManageable: OverlayManageable?
+    
+    // MARK: UserInteraction
+    @IBAction func testButtonAction(_ sender: Any) {
+        let location = PinningLocation(horizontalEdge: .left, verticalEdge: .top)
+        let config = OverlayDisplayConfiguration(animationType: .slide, pinningLocation: location)
+        overlayManageable = overlayManager.displayOverlay(OverlayViewType.'your overlay type', configuration: config)
     }
 }
 ```
