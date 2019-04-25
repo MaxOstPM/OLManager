@@ -1,8 +1,8 @@
 {
   "name": "OLManager",
-  "version": "1.1.10",
+  "version": "1.4.1",
   "summary": "Lightweight pod that will help you to manage your custom Overlays in easiest way.",
-  "description": "Overlay Manager is a lightweight, easy-to-use, written on Swift helper, which will provide you the conviniet api to manage our custom overlays and avoid code repeating. Overlay Manager will give you the ability to add/remove your overlay with your own setups, usign different animations (if you needed).",
+  "description": "Overlay Manager is a lightweight, easy-to-use, written on Swift - helper, which will provide you the convenient API to manage your custom overlays lifecycle with avoiding code repeating.",
   "homepage": "https://github.com/MaxOstPM/OLManager",
   "license": {
     "type": "MIT",
@@ -13,9 +13,9 @@
   },
   "source": {
     "git": "https://github.com/MaxOstPM/OLManager.git",
-    "tag": "1.1.10"
+    "tag": "1.4.1"
   },
-  "swift_version": "4.2",
+  "swift_versions": "4.2",
   "platforms": {
     "ios": "8.0"
   },

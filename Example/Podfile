@@ -1,4 +1,4 @@
 use_frameworks!
 target 'OLManager_Tests' do
-  pod 'OLManager'
+  pod 'OLManager', :path => '../'
 end

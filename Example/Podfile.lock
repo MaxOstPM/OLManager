@@ -1,16 +1,16 @@
 PODS:
-  - OLManager (1.1.10)
+  - OLManager (1.4.1)
 
 DEPENDENCIES:
-  - OLManager (from `/Users/max/Desktop/OverlaysManager/Pod/OverlaysManager/OLManager`)
+  - OLManager (from `../`)
 
 EXTERNAL SOURCES:
   OLManager:
-    :path: "/Users/max/Desktop/OverlaysManager/Pod/OverlaysManager/OLManager"
+    :path: "../"
 
 SPEC CHECKSUMS:
-  OLManager: 26d1b7788a77f46983065d18ba8b17c7a171d315
+  OLManager: 19b77e4f7e1cf669d15997cd78a57cf503373757
 
-PODFILE CHECKSUM: fbe327bc8b72d04f2cb2f88073924f068e3d5214
+PODFILE CHECKSUM: 6405212f8a221e27325e9b470e941b1f91ec8ebe
 
-COCOAPODS: 1.6.0
+COCOAPODS: 1.7.0.beta.3

@@ -21,11 +21,12 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod 'OLManager'
 ```
-## Implementation Examples
+## Usage
 
 ```swift
 import OLManager
 
+// MARK: - OverlayManagerFlowSetup
 enum YourCustomOverlays: OverlayLevelHolder { 
     case successOverlay
     case failurOverlay
@@ -61,6 +62,7 @@ final class OverlayManagerProvider {
     }
 }
 
+// MARK: - TestViewController
 final class ViewController: BaseViewController {
     let overlayManager = OverlayManagerProvider.provider.overlayManager
     var overlayManageable: OverlayManageable?
