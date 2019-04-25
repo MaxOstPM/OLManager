@@ -11,8 +11,6 @@ Overlay Manager is a lightweight, easy-to-use, written on Swift - helper, which 
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-## Requirements
-
 ## Installation
 
 OLManager is available through [CocoaPods](https://cocoapods.org). To install
